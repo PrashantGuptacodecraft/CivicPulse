@@ -1,6 +1,7 @@
 'use client';
-import React, { useRef, useState, useCallback, useMemo } from 'react';
+import React, { useRef, useState, useCallback, useMemo, useEffect } from 'react';
 import { clusterMarkers } from './clustering.js';
+import { RealLeafletMap } from '../map/real-leaflet-map.jsx';
 
 // Pilot Viewport bounds covering Pune (PMC) and Pimpri-Chinchwad (PCMC)
 const VIEWPORT = {
@@ -38,6 +39,13 @@ export function OperationsMapView({
   const containerRef = useRef(null);
   const [zoom, setZoom] = useState(1);
   const [centerOffset, setCenterOffset] = useState({ x: 0, y: 0 });
+  const [isClient, setIsClient] = useState(false);
+  const [mapMode, setMapMode] = useState('real'); // 'real' | 'vector'
+  const [tileProvider, setTileProvider] = useState('carto');
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   // Geographic (lat, lng) to SVG percentage coordinates (0% to 100%)
   const geoToPercent = useCallback((lat, lng) => {
@@ -88,17 +96,80 @@ export function OperationsMapView({
 
   return (
     <div className="relative w-full rounded-2xl border border-border-primary bg-surface-secondary overflow-hidden select-none shadow-elevation-1">
+      {/* Top Map Mode Switcher & Layer Selector Header */}
+      <div className="px-4 py-2.5 bg-white/95 border-b border-border-primary flex flex-wrap items-center justify-between gap-2.5 z-20 relative">
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setMapMode('real')}
+            className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-all flex items-center gap-1.5 ${
+              mapMode === 'real'
+                ? 'bg-primary text-white shadow-sm'
+                : 'bg-surface-tertiary text-text-secondary hover:text-text-primary'
+            }`}
+          >
+            <span>🗺️</span>
+            <span>Real OpenStreetMap (Live Tiles)</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => setMapMode('vector')}
+            className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-all flex items-center gap-1.5 ${
+              mapMode === 'vector'
+                ? 'bg-primary text-white shadow-sm'
+                : 'bg-surface-tertiary text-text-secondary hover:text-text-primary'
+            }`}
+          >
+            <span>📐</span>
+            <span>Vector Boundary Pilot</span>
+          </button>
+        </div>
+
+        {mapMode === 'real' && (
+          <div className="flex items-center gap-2 text-xs">
+            <span className="text-text-secondary font-medium">Layer:</span>
+            <select
+              value={tileProvider}
+              onChange={(e) => setTileProvider(e.target.value)}
+              className="text-xs font-semibold bg-surface-tertiary text-text-primary border border-border-primary rounded-lg px-2.5 py-1.5 outline-none focus:ring-1 focus:ring-primary"
+            >
+              <option value="carto">🏛️ Clean CARTO (Civic)</option>
+              <option value="osm">🗺️ Standard OpenStreetMap</option>
+              <option value="satellite">🛰️ Satellite Imagery (Esri)</option>
+            </select>
+          </div>
+        )}
+      </div>
+
       {/* Map Canvas */}
       <div
         ref={containerRef}
         role="application"
         tabIndex={0}
         aria-label="CivIQ Operational Jurisdiction Map. Interactive vector map showing issues and clusters."
-        className="relative w-full h-[360px] sm:h-[460px] lg:h-[540px] overflow-hidden bg-[#F1F5F9] cursor-grab active:cursor-grabbing focus:outline-none focus:ring-2 focus:ring-primary"
+        className="relative w-full h-[360px] sm:h-[460px] lg:h-[540px] overflow-hidden bg-[#F1F5F9] focus:outline-none focus:ring-2 focus:ring-primary"
       >
+        {/* Real Leaflet Map Layer (Active in browser when real map mode is selected) */}
+        {isClient && mapMode === 'real' ? (
+          <div className="w-full h-full">
+            <RealLeafletMap
+              center={{ latitude: 18.528, longitude: 73.852 }}
+              zoom={13}
+              issues={issues}
+              selectedIssue={selectedIssue}
+              onSelectIssue={onSelectIssue}
+              isClustered={isClustered}
+              tileProvider={tileProvider}
+              showBoundaries={true}
+            />
+          </div>
+        ) : null}
+
         {/* Transform container for zoom and pan */}
         <div
-          className="w-full h-full relative transition-transform duration-200 ease-out"
+          className={`w-full h-full relative transition-transform duration-200 ease-out cursor-grab active:cursor-grabbing ${
+            isClient && mapMode === 'real' ? 'hidden' : 'block'
+          }`}
           style={{
             transform: `scale(${zoom}) translate(${centerOffset.x}%, ${centerOffset.y}%)`,
             transformOrigin: 'center center',
