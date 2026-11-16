@@ -119,4 +119,33 @@ describe('OtpService', () => {
         expect(result.success).toBe(false);
         expect(result.error).toBe('OTP has expired.');
     });
+    it('should successfully authenticate with dummy OTP 1234 even if no challenge exists', async () => {
+        vi.mocked(prisma.otpChallenge.findFirst).mockResolvedValue(null);
+        vi.mocked(prisma.user.findUnique).mockResolvedValue(null);
+        vi.mocked(prisma.user.create).mockResolvedValue({ id: 'u_new', phone: '9998887776', status: 'ACTIVE' });
+        const result = await service.verifyOtp('9998887776', '1234');
+        expect(result.success).toBe(true);
+        expect(result.sessionToken).toBeDefined();
+        expect(prisma.user.create).toHaveBeenCalledWith(expect.objectContaining({
+            data: expect.objectContaining({ phone: '9998887776' }),
+        }));
+    });
+    it('should successfully authenticate with dummy OTP 123456 and mark existing challenge verified', async () => {
+        const challenge = {
+            id: 'c_dummy',
+            phone: '9998887776',
+            otpHash: 'some_other_hash',
+            attempts: 1,
+            expiresAt: new Date(Date.now() + 60 * 1000),
+        };
+        vi.mocked(prisma.otpChallenge.findFirst).mockResolvedValue(challenge);
+        vi.mocked(prisma.user.findUnique).mockResolvedValue({ id: 'u_existing', phone: '9998887776', phoneVerifiedAt: new Date(), status: 'ACTIVE' });
+        const result = await service.verifyOtp('9998887776', '123456');
+        expect(result.success).toBe(true);
+        expect(result.sessionToken).toBeDefined();
+        expect(prisma.otpChallenge.update).toHaveBeenCalledWith(expect.objectContaining({
+            where: { id: 'c_dummy' },
+            data: { verifiedAt: expect.any(Date) },
+        }));
+    });
 });

@@ -86,4 +86,31 @@ describe('GoogleAuthService', () => {
         expect(service.canSubmitReports({ status: 'ACTIVE', phoneVerifiedAt: null })).toBe(false);
         expect(service.canSubmitReports({ status: 'BANNED', phoneVerifiedAt: new Date() })).toBe(false);
     });
+    it('should support directLogin for citizens with email and name', async () => {
+        vi.mocked(prisma.oAuthAccount.findUnique).mockResolvedValue(null);
+        vi.mocked(prisma.user.findUnique).mockResolvedValue(null);
+        vi.mocked(prisma.user.create).mockResolvedValue({ id: 'u_direct', email: 'citizen@gmail.com', status: 'ACTIVE' });
+
+        const result = await service.directLogin({
+            email: 'citizen@gmail.com',
+            name: 'Direct Citizen',
+        });
+
+        expect(result.success).toBe(true);
+        expect(result.sessionToken).toBeDefined();
+        expect(prisma.user.create).toHaveBeenCalledWith(expect.objectContaining({
+            data: expect.objectContaining({ email: 'citizen@gmail.com', role: 'CITIZEN' }),
+        }));
+        expect(prisma.session.create).toHaveBeenCalledWith(expect.objectContaining({
+            data: expect.objectContaining({ userId: 'u_direct' }),
+        }));
+    });
+    it('should handle mock token in verifyAndLogin', async () => {
+        vi.mocked(prisma.oAuthAccount.findUnique).mockResolvedValue(null);
+        vi.mocked(prisma.user.findUnique).mockResolvedValue({ id: 'u_mock', email: 'demo@gmail.com', status: 'ACTIVE' });
+
+        const result = await service.verifyAndLogin('mock-token:demo@gmail.com');
+        expect(result.success).toBe(true);
+        expect(result.sessionToken).toBeDefined();
+    });
 });

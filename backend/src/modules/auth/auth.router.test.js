@@ -4,6 +4,7 @@ import express from 'express';
 import { authRouter } from './auth.router.js';
 import { otpService } from './otp/otp.service.js';
 import { passwordAuthService } from './password/password.service.js';
+import { googleAuthService } from './google/google.service.js';
 import { prisma } from '@civiq/db';
 
 const app = express();
@@ -116,6 +117,59 @@ describe('Auth Router Integration Tests', () => {
       expect(res.status).toBe(200);
       expect(res.body.token).toBe('official-session-token');
       expect(res.body.user.role).toBe('DEPARTMENT_OFFICER');
+    });
+  });
+
+  describe('POST /auth/google', () => {
+    it('returns 400 when neither token nor email is provided', async () => {
+      const res = await request(app).post('/auth/google').send({});
+      expect(res.status).toBe(400);
+      expect(res.body.error).toMatch(/credential or email is required/i);
+    });
+
+    it('returns token and user on successful direct Google login', async () => {
+      vi.spyOn(googleAuthService, 'directLogin').mockResolvedValueOnce({
+        success: true,
+        sessionToken: 'google-session-tok-123',
+        user: { id: 'usr-google-1' },
+      });
+      vi.spyOn(prisma.user, 'findUnique').mockResolvedValueOnce({
+        id: 'usr-google-1',
+        email: 'citizen@gmail.com',
+        phone: null,
+        role: 'CITIZEN',
+        profile: { displayName: 'Google Citizen' },
+      });
+
+      const res = await request(app).post('/auth/google').send({
+        email: 'citizen@gmail.com',
+        name: 'Google Citizen',
+      });
+      expect(res.status).toBe(200);
+      expect(res.body.token).toBe('google-session-tok-123');
+      expect(res.body.user.role).toBe('CITIZEN');
+      expect(res.body.user.name).toBe('Google Citizen');
+    });
+
+    it('returns token on verified Google idToken', async () => {
+      vi.spyOn(googleAuthService, 'verifyAndLogin').mockResolvedValueOnce({
+        success: true,
+        sessionToken: 'google-verified-tok',
+        user: { id: 'usr-google-2' },
+      });
+      vi.spyOn(prisma.user, 'findUnique').mockResolvedValueOnce({
+        id: 'usr-google-2',
+        email: 'verified@gmail.com',
+        phone: null,
+        role: 'CITIZEN',
+      });
+
+      const res = await request(app).post('/auth/google').send({
+        idToken: 'valid-google-jwt-token',
+      });
+      expect(res.status).toBe(200);
+      expect(res.body.token).toBe('google-verified-tok');
+      expect(res.body.user.role).toBe('CITIZEN');
     });
   });
 
