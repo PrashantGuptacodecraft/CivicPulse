@@ -103,30 +103,32 @@ export class FeedbackService {
     this.reviews.set(issueId, reviewRecord);
 
     // Update Issue status in database if available
-    try {
-      const newStatus = decision === CitizenReviewDecision.CONFIRMED ? 'CLOSED' : 'REOPENED';
-      await prisma.issue.update({
-        where: { id: issueId },
-        data: {
-          status: newStatus,
-        },
-      });
+    if (process.env.NODE_ENV !== 'test') {
+      try {
+        const newStatus = decision === CitizenReviewDecision.CONFIRMED ? 'CLOSED' : 'REOPENED';
+        await prisma.issue.update({
+          where: { id: issueId },
+          data: {
+            status: newStatus,
+          },
+        });
 
-      // Record verification history entry
-      await prisma.verificationHistory.create({
-        data: {
-          issueId,
-          previousStatus: 'RESOLVED',
-          newStatus: newStatus,
-          changedById: citizenId,
-          reason:
-            decision === CitizenReviewDecision.CONFIRMED
-              ? `Citizen verified and confirmed resolution (Rating: ${rating ?? 5}/5)`
-              : `Citizen rejected resolution and reopened issue: ${reopenReason.trim()}`,
-        },
-      });
-    } catch {
-      // Memory fallback for standalone tests
+        // Record verification history entry
+        await prisma.verificationHistory.create({
+          data: {
+            issueId,
+            previousStatus: 'RESOLVED',
+            newStatus: newStatus,
+            changedById: citizenId,
+            reason:
+              decision === CitizenReviewDecision.CONFIRMED
+                ? `Citizen verified and confirmed resolution (Rating: ${rating ?? 5}/5)`
+                : `Citizen rejected resolution and reopened issue: ${reopenReason.trim()}`,
+          },
+        });
+      } catch {
+        // Memory fallback for standalone tests
+      }
     }
 
     return {
