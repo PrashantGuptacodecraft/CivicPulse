@@ -1,1 +1,22 @@
-export {};
+/**
+ * AI Audit & Model Governance Types and Constants
+ * Phase 69: AI Audit Trail & Human-in-the-Loop Governance
+ */
+
+export const HumanDecision = {
+  PENDING_REVIEW: 'PENDING_REVIEW',
+  ACCEPTED: 'ACCEPTED',
+  MODIFIED: 'MODIFIED',
+  OVERRIDDEN: 'OVERRIDDEN',
+  REJECTED: 'REJECTED',
+};
+
+export const AiAuditOperation = {
+  TRIAGE: 'TRIAGE',
+  SEVERITY_ASSESSMENT: 'SEVERITY_ASSESSMENT',
+  DUPLICATE_DETECTION: 'DUPLICATE_DETECTION',
+  SLA_PREDICTION: 'SLA_PREDICTION',
+  ROUTING: 'ROUTING',
+  IMAGE_VERIFICATION: 'IMAGE_VERIFICATION',
+  SPEECH_TRANSLATION: 'SPEECH_TRANSLATION',
+};
