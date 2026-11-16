@@ -2,7 +2,7 @@
  * CivIQ Authentication Middleware
  *
  * Provides:
- *   authenticateUser    — Reads Bearer token, attaches req.user or returns 401
+ *   authenticateUser    — Reads Bearer token / x-session-token, verifies account status, attaches req.user or returns 401/403
  *   requireRole(...roles) — Middleware that restricts access to specified roles
  *   optionalAuth        — Attaches req.user if token present, never 401s
  */
@@ -19,7 +19,7 @@ async function resolveSession(token) {
   const tokenHash = hashToken(token);
   const session = await prisma.session.findUnique({
     where: { tokenHash },
-    include: { user: true },
+    include: { user: { include: { profile: true } } },
   });
   if (!session || session.isRevoked || session.expiresAt < new Date()) {
     return null;
@@ -29,13 +29,14 @@ async function resolveSession(token) {
 
 function extractBearerToken(req) {
   const auth = req.headers['authorization'] || '';
-  if (auth.startsWith('Bearer ')) return auth.slice(7);
+  if (auth.startsWith('Bearer ')) return auth.slice(7).trim();
+  if (typeof req.headers['x-session-token'] === 'string') return req.headers['x-session-token'].trim();
   return null;
 }
 
 /**
  * Middleware: Validates session token and attaches req.user
- * Returns 401 if no valid session.
+ * Returns 401 if no valid session, 403 if user account is inactive/suspended.
  */
 export async function authenticateUser(req, res, next) {
   try {
@@ -44,12 +45,15 @@ export async function authenticateUser(req, res, next) {
     if (!session) {
       return res.status(401).json({ error: 'Authentication required.' });
     }
+    if (session.user.status && session.user.status !== 'ACTIVE') {
+      return res.status(403).json({ error: 'User account is inactive or suspended.' });
+    }
     req.user = {
       id: session.user.id,
       email: session.user.email,
       phone: session.user.phone,
       role: session.user.role,
-      name: session.user.name,
+      name: session.user.profile?.displayName || session.user.name || null,
       sessionId: session.id,
     };
     next();
@@ -90,13 +94,13 @@ export async function optionalAuth(req, res, next) {
     const token = extractBearerToken(req);
     if (token) {
       const session = await resolveSession(token);
-      if (session) {
+      if (session && (!session.user.status || session.user.status === 'ACTIVE')) {
         req.user = {
           id: session.user.id,
           email: session.user.email,
           phone: session.user.phone,
           role: session.user.role,
-          name: session.user.name,
+          name: session.user.profile?.displayName || session.user.name || null,
           sessionId: session.id,
         };
       }

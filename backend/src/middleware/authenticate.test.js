@@ -35,6 +35,27 @@ describe('Authentication Middleware', () => {
       expect(res.status).toBe(401);
     });
 
+    it('returns 403 when user account is inactive or suspended', async () => {
+      vi.spyOn(prisma.session, 'findUnique').mockResolvedValueOnce({
+        id: 'sess-banned',
+        isRevoked: false,
+        expiresAt: new Date(Date.now() + 100000),
+        user: {
+          id: 'usr-banned',
+          role: 'FIELD_WORKER',
+          status: 'SUSPENDED',
+          profile: { displayName: 'Banned Worker' },
+        },
+      });
+
+      const res = await request(app)
+        .get('/protected-worker')
+        .set('Authorization', 'Bearer banned-token');
+
+      expect(res.status).toBe(403);
+      expect(res.body.error).toMatch(/inactive or suspended/i);
+    });
+
     it('returns 403 when user does not have the required role', async () => {
       vi.spyOn(prisma.session, 'findUnique').mockResolvedValueOnce({
         id: 'sess-1',
@@ -43,7 +64,8 @@ describe('Authentication Middleware', () => {
         user: {
           id: 'usr-citizen',
           role: 'CITIZEN',
-          name: 'Citizen Jane',
+          status: 'ACTIVE',
+          profile: { displayName: 'Citizen Jane' },
         },
       });
 
@@ -63,7 +85,8 @@ describe('Authentication Middleware', () => {
         user: {
           id: 'usr-worker',
           role: 'FIELD_WORKER',
-          name: 'Worker Bob',
+          status: 'ACTIVE',
+          profile: { displayName: 'Worker Bob' },
         },
       });
 
@@ -74,6 +97,28 @@ describe('Authentication Middleware', () => {
       expect(res.status).toBe(200);
       expect(res.body.message).toBe('authorized');
       expect(res.body.user.role).toBe('FIELD_WORKER');
+      expect(res.body.user.name).toBe('Worker Bob');
+    });
+
+    it('supports authentication via x-session-token header', async () => {
+      vi.spyOn(prisma.session, 'findUnique').mockResolvedValueOnce({
+        id: 'sess-worker',
+        isRevoked: false,
+        expiresAt: new Date(Date.now() + 100000),
+        user: {
+          id: 'usr-worker',
+          role: 'FIELD_WORKER',
+          status: 'ACTIVE',
+          profile: { displayName: 'Worker Bob' },
+        },
+      });
+
+      const res = await request(app)
+        .get('/protected-worker')
+        .set('x-session-token', 'worker-token');
+
+      expect(res.status).toBe(200);
+      expect(res.body.user.id).toBe('usr-worker');
     });
   });
 
@@ -92,7 +137,8 @@ describe('Authentication Middleware', () => {
         user: {
           id: 'usr-1',
           role: 'CITIZEN',
-          name: 'Jane',
+          status: 'ACTIVE',
+          profile: { displayName: 'Jane' },
         },
       });
 
@@ -102,6 +148,7 @@ describe('Authentication Middleware', () => {
 
       expect(res.status).toBe(200);
       expect(res.body.user.id).toBe('usr-1');
+      expect(res.body.user.name).toBe('Jane');
     });
   });
 });
