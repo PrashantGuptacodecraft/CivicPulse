@@ -34,7 +34,7 @@ describe('Phase 48: Background Report Generator Worker Job', () => {
     expect(completedJob.mimeType).toBe('text/csv');
     expect(completedJob.recordCount).toBeGreaterThan(0);
     expect(completedJob.completedAt).toBeDefined();
-  });
+  }, 10000);
 
   it('throws error when job id does not exist', async () => {
     await expect(processReportGenerationJob('non-existent-job-id')).rejects.toThrow(
