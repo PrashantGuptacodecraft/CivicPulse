@@ -41,7 +41,7 @@ export function OperationsMapView({
   const [centerOffset, setCenterOffset] = useState({ x: 0, y: 0 });
   const [isClient, setIsClient] = useState(false);
   const [mapMode, setMapMode] = useState('real'); // 'real' | 'vector'
-  const [tileProvider, setTileProvider] = useState('carto');
+  const [tileProvider, setTileProvider] = useState('osm');
 
   useEffect(() => {
     setIsClient(true);
@@ -133,8 +133,9 @@ export function OperationsMapView({
               onChange={(e) => setTileProvider(e.target.value)}
               className="text-xs font-semibold bg-surface-tertiary text-text-primary border border-border-primary rounded-lg px-2.5 py-1.5 outline-none focus:ring-1 focus:ring-primary"
             >
-              <option value="carto">🏛️ Clean CARTO (Civic)</option>
-              <option value="osm">🗺️ Standard OpenStreetMap</option>
+              <option value="osm">🗺️ Standard OpenStreetMap (100% Free)</option>
+              <option value="hot">🏛️ Civic / Infrastructure (OSM Hot)</option>
+              <option value="streets">🛣️ World Street Map (Esri)</option>
               <option value="satellite">🛰️ Satellite Imagery (Esri)</option>
             </select>
           </div>

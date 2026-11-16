@@ -1,23 +1,30 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
 
-// Tile layer URLs and attributions
+// 100% Free Tile Layer URLs and attributions (No API Key Required)
 export const TILE_PROVIDERS = {
-  carto: {
-    name: 'Clean Civic (CARTO)',
-    url: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> &copy; <a href="https://carto.com/" target="_blank" rel="noopener">CARTO</a>',
-    subdomains: 'abcd',
-    maxZoom: 19,
-  },
   osm: {
     name: 'OpenStreetMap Standard',
-    url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
+    subdomains: 'abc',
+    maxZoom: 19,
+  },
+  hot: {
+    name: 'Civic / Infrastructure (OSM Hot)',
+    url: 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank" rel="noopener">Humanitarian OSM</a>',
+    subdomains: 'abc',
+    maxZoom: 19,
+  },
+  streets: {
+    name: 'World Street Map (Esri)',
+    url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
+    attribution: 'Tiles &copy; Esri &mdash; Sources: Esri, USGS, NOAA',
     maxZoom: 19,
   },
   satellite: {
-    name: 'Satellite Imagery',
+    name: 'Satellite Imagery (Esri)',
     url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
     attribution: 'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics',
     maxZoom: 18,
@@ -49,7 +56,7 @@ export function RealLeafletMap({
   selectedIssue = null,
   onSelectIssue = null,
   isClustered = false,
-  tileProvider = 'carto',
+  tileProvider = 'osm',
   showBoundaries = true,
   disabled = false,
   className = 'w-full h-full',
@@ -85,7 +92,7 @@ export function RealLeafletMap({
       mapInstanceRef.current = map;
 
       // Add Base Tile Layer
-      const providerConfig = TILE_PROVIDERS[tileProvider] || TILE_PROVIDERS.carto;
+      const providerConfig = TILE_PROVIDERS[tileProvider] || TILE_PROVIDERS.osm;
       const tileLayer = L.tileLayer(providerConfig.url, {
         attribution: providerConfig.attribution,
         maxZoom: providerConfig.maxZoom || 19,
@@ -174,7 +181,7 @@ export function RealLeafletMap({
     import('leaflet').then((L) => {
       if (!mapInstanceRef.current) return;
       mapInstanceRef.current.removeLayer(tileLayerRef.current);
-      const providerConfig = TILE_PROVIDERS[tileProvider] || TILE_PROVIDERS.carto;
+      const providerConfig = TILE_PROVIDERS[tileProvider] || TILE_PROVIDERS.osm;
       tileLayerRef.current = L.tileLayer(providerConfig.url, {
         attribution: providerConfig.attribution,
         maxZoom: providerConfig.maxZoom || 19,

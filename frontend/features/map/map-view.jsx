@@ -15,7 +15,7 @@ export function MapView({ center, selectedPoint, onSelectPoint, isAmbiguous = fa
     const [zoom, setZoom] = useState(1);
     const [isClient, setIsClient] = useState(false);
     const [mapMode, setMapMode] = useState('real'); // 'real' | 'vector'
-    const [tileProvider, setTileProvider] = useState('carto');
+    const [tileProvider, setTileProvider] = useState('osm');
 
     useEffect(() => {
         setIsClient(true);
@@ -120,9 +120,10 @@ export function MapView({ center, selectedPoint, onSelectPoint, isAmbiguous = fa
               onChange={(e) => setTileProvider(e.target.value)}
               className="text-xs font-medium bg-surface-tertiary text-text-primary border border-border-primary rounded-md px-2 py-1 outline-none focus:ring-1 focus:ring-primary"
             >
-              <option value="carto">Clean CARTO</option>
-              <option value="osm">Standard OSM</option>
-              <option value="satellite">Satellite Imagery</option>
+              <option value="osm">Standard OpenStreetMap</option>
+              <option value="hot">Civic / Infrastructure (OSM Hot)</option>
+              <option value="streets">World Street Map (Esri)</option>
+              <option value="satellite">Satellite Imagery (Esri)</option>
             </select>
           )}
         </div>
