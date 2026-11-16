@@ -5,7 +5,7 @@ vi.mock('@civiq/db', () => ({
     prisma: {
         organization: {
             create: vi.fn(),
-            findUnique: vi.fn(),
+            findFirst: vi.fn(),
             findMany: vi.fn(),
             update: vi.fn(),
         },
@@ -34,6 +34,16 @@ describe('OrganizationService', () => {
         });
         expect(prisma.organization.create).toHaveBeenCalledWith({
             data: { name: 'Test NGO', type: 'NGO', jurisdictionId: 'jur-1' },
+        });
+        expect(result).toEqual(mockOrg);
+    });
+    it('should get organization by id', async () => {
+        const mockOrg = { id: 'org-1', name: 'Test NGO' };
+        vi.mocked(prisma.organization.findFirst).mockResolvedValue(mockOrg);
+        const result = await service.getOrganizationById('org-1');
+        expect(prisma.organization.findFirst).toHaveBeenCalledWith({
+            where: { id: 'org-1', deletedAt: null },
+            include: { jurisdiction: true, departments: true },
         });
         expect(result).toEqual(mockOrg);
     });

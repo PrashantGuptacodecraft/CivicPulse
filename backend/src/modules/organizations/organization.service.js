@@ -10,7 +10,7 @@ export class OrganizationService {
         });
     }
     async getOrganizationById(id) {
-        return prisma.organization.findUnique({
+        return prisma.organization.findFirst({
             where: { id, deletedAt: null },
             include: {
                 jurisdiction: true,
