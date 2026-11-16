@@ -5,7 +5,7 @@ vi.mock('@civiq/db', () => ({
     prisma: {
         department: {
             create: vi.fn(),
-            findUnique: vi.fn(),
+            findFirst: vi.fn(),
             findMany: vi.fn(),
         },
     },
@@ -25,6 +25,16 @@ describe('DepartmentService', () => {
         });
         expect(prisma.department.create).toHaveBeenCalledWith({
             data: { name: 'Roads', organizationId: 'org-1', issueCategories: ['pothole', 'streetlights'] },
+        });
+        expect(result).toEqual(mockDept);
+    });
+    it('should get department by id', async () => {
+        const mockDept = { id: 'dept-1', name: 'Roads', organizationId: 'org-1' };
+        vi.mocked(prisma.department.findFirst).mockResolvedValue(mockDept);
+        const result = await service.getDepartmentById('dept-1');
+        expect(prisma.department.findFirst).toHaveBeenCalledWith({
+            where: { id: 'dept-1', deletedAt: null },
+            include: { organization: { include: { jurisdiction: true } } },
         });
         expect(result).toEqual(mockDept);
     });

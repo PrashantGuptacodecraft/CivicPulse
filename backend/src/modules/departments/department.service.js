@@ -10,7 +10,7 @@ export class DepartmentService {
         });
     }
     async getDepartmentById(id) {
-        return prisma.department.findUnique({
+        return prisma.department.findFirst({
             where: { id, deletedAt: null },
             include: {
                 organization: {
