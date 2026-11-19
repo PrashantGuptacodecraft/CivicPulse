@@ -26,7 +26,7 @@ export function FieldWorkerConsole({
   const handleManualSync = useCallback(async () => {
     setSyncStatus(SYNC_STATUS.SYNCING);
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || '/api';
       const result = await mutationQueueManager.flush(async (mutations) => {
         // Try live backend API or fallback to simulated server resolution
         try {

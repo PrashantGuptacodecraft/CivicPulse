@@ -52,5 +52,10 @@ export default function handler(req, res) {
     });
   }
 
+  // Strip leading /api prefix if present (e.g. /api/auth/otp/send -> /auth/otp/send)
+  if (req.url && req.url.startsWith('/api/')) {
+    req.url = req.url.slice(4);
+  }
+
   return app(req, res);
 }
