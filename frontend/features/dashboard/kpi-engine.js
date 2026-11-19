@@ -3,11 +3,18 @@
  */
 
 export function computeDashboardKpis(issues = [], options = {}) {
-  const { department = 'ALL', ward = 'ALL', timeRange = '30d' } = options;
+  const { department = 'ALL', ward = 'ALL', timeRange = '30d', referenceDate } = options;
 
   // Filter by time window
-  const now = new Date();
-  let timeThreshold = new Date();
+  let now = referenceDate ? new Date(referenceDate) : new Date();
+  if (!referenceDate && issues.length > 0) {
+    const maxCreated = Math.max(...issues.map((i) => new Date(i.createdAt).getTime()));
+    if (now.getTime() - maxCreated > 7 * 24 * 60 * 60 * 1000) {
+      now = new Date(maxCreated);
+    }
+  }
+
+  let timeThreshold = new Date(now.getTime());
   if (timeRange === '24h') {
     timeThreshold.setHours(now.getHours() - 24);
   } else if (timeRange === '7d') {
@@ -42,7 +49,7 @@ export function computeDashboardKpis(issues = [], options = {}) {
   const total = filtered.length;
 
   // Enriched metrics per issue
-  const nowMs = Date.now();
+  const nowMs = now.getTime();
   const enriched = filtered.map((issue) => {
     const slaDays = issue.slaDays || 3;
     const slaMs = slaDays * 24 * 60 * 60 * 1000;

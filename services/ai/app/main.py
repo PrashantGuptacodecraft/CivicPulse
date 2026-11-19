@@ -7,7 +7,9 @@ from app.observability.health import router as health_router
 
 app = FastAPI(
     title="CivicPulse AI Gateway",
-    description="Provider-agnostic AI Gateway microservice for CivicPulse civic intelligence platform.",
+    description=(
+        "Provider-agnostic AI Gateway microservice for CivicPulse civic intelligence platform."
+    ),
     version="1.0.0",
 )
 
