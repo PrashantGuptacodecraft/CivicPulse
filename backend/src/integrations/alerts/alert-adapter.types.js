@@ -82,9 +82,9 @@ export const INGESTION_STATUS = Object.freeze({
 
 /**
  * Statutory safety disclaimer mandated by ADR 0002 and AGENTS.md.
- * Official alerts ingested into CivIQ must always preserve authoritative source primacy.
+ * Official alerts ingested into CivicPulse must always preserve authoritative source primacy.
  */
 export const DISASTER_STATUTORY_DISCLAIMER =
-  'CivIQ Disaster Alert Ingestion Notice: Statutory emergency declarations, evacuation mandates, and weather bulletins ' +
+  'CivicPulse Disaster Alert Ingestion Notice: Statutory emergency declarations, evacuation mandates, and weather bulletins ' +
   'remain under the exclusive sovereign authority of NDMA, SDMA, DDMA, IMD, and municipal corporations under the Disaster Management Act, 2005. ' +
-  'CivIQ ingests and displays official alerts verbatim for operational correlation and civic awareness without altering official instructions.';
+  'CivicPulse ingests and displays official alerts verbatim for operational correlation and civic awareness without altering official instructions.';

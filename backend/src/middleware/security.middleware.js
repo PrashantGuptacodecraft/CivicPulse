@@ -1,5 +1,5 @@
 /**
- * CivIQ Security Hardening Middleware
+ * CivicPulse Security Hardening Middleware
  * Phase 70: Security hardening and threat-model closure
  *
  * Implements:

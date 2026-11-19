@@ -6,8 +6,8 @@ from app.api.v1 import router as v1_router
 from app.observability.health import router as health_router
 
 app = FastAPI(
-    title="CivIQ AI Gateway",
-    description="Provider-agnostic AI Gateway microservice for CivIQ civic intelligence platform.",
+    title="CivicPulse AI Gateway",
+    description="Provider-agnostic AI Gateway microservice for CivicPulse civic intelligence platform.",
     version="1.0.0",
 )
 
@@ -18,7 +18,7 @@ app.include_router(v1_router)
 @app.get("/")
 def root_info() -> dict[str, Any]:
     return {
-        "service": "CivIQ AI Gateway",
+        "service": "CivicPulse AI Gateway",
         "status": "online",
         "api_version": "v1",
         "endpoints": [

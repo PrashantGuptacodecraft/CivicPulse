@@ -29,7 +29,7 @@ describe('Phase 56: Accident Response Workflow & Emergency UX', () => {
       expect(html).toContain('min-h-[56px]');
     });
 
-    it('enforces clear CivIQ boundary disclaimer stating it is not an emergency dispatch service', () => {
+    it('enforces clear CivicPulse boundary disclaimer stating it is not an emergency dispatch service', () => {
       const html = renderToStaticMarkup(<EmergencyHandoffBanner />);
       expect(html).toContain('not an official emergency dispatch service');
       expect(html).toContain('contact emergency responders immediately');
@@ -109,7 +109,7 @@ describe('Phase 56: Accident Response Workflow & Emergency UX', () => {
       );
 
       expect(html).toContain('Sensitive Trauma / Graphic Content Restricted');
-      expect(html).toContain('Accident victim injury evidence protected per CivIQ Privacy and Ethics Policy');
+      expect(html).toContain('Accident victim injury evidence protected per CivicPulse Privacy and Ethics Policy');
       expect(html).not.toContain('/protected-evidence/paud_flyover_injury_trauma_close.jpg');
     });
   });

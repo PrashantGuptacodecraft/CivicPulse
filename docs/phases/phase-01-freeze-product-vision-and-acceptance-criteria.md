@@ -11,7 +11,7 @@ Create docs/product/PRD.md with personas, problem, goals, boundaries, KPIs and n
 
 ## Implementation tasks
 - Create docs/product/PRD.md with personas, problem, goals, boundaries, KPIs and non-goals.
-- Define the core CivIQ promise: identity → evidence → verification → action → proof → learning.
+- Define the core CivicPulse promise: identity → evidence → verification → action → proof → learning.
 - Define the first pilot jurisdiction and the India-wide capability target.
 
 ## Primary files / areas

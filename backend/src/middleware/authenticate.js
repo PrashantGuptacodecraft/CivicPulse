@@ -1,5 +1,5 @@
 /**
- * CivIQ Authentication Middleware
+ * CivicPulse Authentication Middleware
  *
  * Provides:
  *   authenticateUser    — Reads Bearer token / x-session-token, verifies account status, attaches req.user or returns 401/403

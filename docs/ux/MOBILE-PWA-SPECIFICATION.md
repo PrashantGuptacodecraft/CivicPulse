@@ -1,15 +1,15 @@
-# CivIQ Mobile PWA Specification
+# CivicPulse Mobile PWA Specification
 
-This document defines the Progressive Web App (PWA) and mobile requirements for the CivIQ platform. Any future coding agents implementing mobile features or PWA functionality MUST adhere to these specifications.
+This document defines the Progressive Web App (PWA) and mobile requirements for the CivicPulse platform. Any mobile features or PWA functionality must adhere to these specifications.
 
 ## 1. Progressive Web App Requirements
 
-- **Web App Manifest**: Must include CivIQ branding, icons, and configuration for standalone display.
+- **Web App Manifest**: Must include CivicPulse branding, icons, and configuration for standalone display.
 - **Service Worker**: Must be implemented for offline caching of core application shells and critical assets.
 - **App-like Experience**: The application must behave like a native application when installed on a device.
 - **Add-to-Homescreen Prompt**: Prompt users to add the application to their homescreen.
 - **Splash Screen**: Display a branded splash screen during application load.
-- **Theme Color**: Must match the primary brand color of CivIQ in the manifest and meta tags.
+- **Theme Color**: Must match the primary brand color of CivicPulse in the manifest and meta tags.
 
 ## 2. Offline Capabilities
 

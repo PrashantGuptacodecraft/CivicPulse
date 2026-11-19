@@ -465,7 +465,7 @@ export function parseRssAtomAlertFeed(feedXml, options = {}) {
 }
 
 /**
- * Normalizes an alert payload into a standardized CivIQ Ingested Official Alert Record.
+ * Normalizes an alert payload into a standardized CivicPulse Ingested Official Alert Record.
  *
  * Enforces AGENTS.md and ADR 0002 mandates:
  * 1. Preserves verbatim official content without rewrites.
@@ -483,7 +483,7 @@ export function normalizeIngestedAlert(parsedData, rawPayload, options = {}) {
 
   const rawPayloadHash = createHash('sha256').update(payloadString).digest('hex');
 
-  // Internal CivIQ unique ingested alert identifier
+  // Internal CivicPulse unique ingested alert identifier
   const internalId = `alt-${authority.toLowerCase().replace(/[^a-z0-9]/g, '-')}-${parsedData.identifier}`;
 
   return {

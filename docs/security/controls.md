@@ -1,14 +1,14 @@
-# CivIQ Security Controls, Incident Response & Account Recovery
+# CivicPulse Security Controls, Incident Response & Account Recovery
 **Phase 70: Security Hardening & Threat-Model Closure**
 
 ---
 
 ## 1. Technical Security Controls Catalog
 
-CivIQ implements defense-in-depth across application, network, data, and organizational boundaries.
+CivicPulse implements defense-in-depth across application, network, data, and organizational boundaries.
 
 ### 1.1 HTTP Security Headers
-Every HTTP response originating from the CivIQ backend API and frontend reverse-proxy enforces the following production headers:
+Every HTTP response originating from the CivicPulse backend API and frontend reverse-proxy enforces the following production headers:
 
 ```http
 X-Content-Type-Options: nosniff
@@ -24,7 +24,7 @@ Cross-Origin-Resource-Policy: same-origin
 - **HSTS:** 1-year duration with subdomains and preload inclusion ensures clients never communicate via unencrypted HTTP.
 
 ### 1.2 Multi-Tier Rate Limiting
-CivIQ deploys sliding-window rate limiters across all API boundaries:
+CivicPulse deploys sliding-window rate limiters across all API boundaries:
 
 | Tier | Window | Max Requests | Target Routes | Response on Exceeded |
 |---|---|---|---|---|
@@ -49,7 +49,7 @@ CivIQ deploys sliding-window rate limiters across all API boundaries:
 
 ## 2. Security Incident Response Plan (SIRT)
 
-CivIQ maintains a formal Security Incident Response Plan for rapid containment, eradication, and statutory compliance.
+CivicPulse maintains a formal Security Incident Response Plan for rapid containment, eradication, and statutory compliance.
 
 ### 2.1 Incident Severity Levels
 
@@ -111,7 +111,7 @@ CivIQ maintains a formal Security Incident Response Plan for rapid containment, 
 
 ## 3. Account Recovery & Identity Protection
 
-CivIQ balances accessible account recovery for citizens with strict anti-takeover protections for government officials.
+CivicPulse balances accessible account recovery for citizens with strict anti-takeover protections for government officials.
 
 ### 3.1 Citizen Account Recovery Workflow
 1. **Primary Recovery Channel:** Mobile OTP to registered Indian phone number.

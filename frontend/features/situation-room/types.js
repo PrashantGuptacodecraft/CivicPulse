@@ -37,7 +37,7 @@ export const AAR_SOURCE_LABELS = Object.freeze({
 });
 
 export const DISASTER_OPS_DISCLAIMER =
-  'CivIQ Disaster Situation Room Notice: Operational matrix and AI-assisted summaries are ' +
+  'CivicPulse Disaster Situation Room Notice: Operational matrix and AI-assisted summaries are ' +
   'designed to coordinate municipal resources. Pursuant to the Disaster Management Act, 2005, ' +
   'sovereign declarations and emergency orders by NDMA/DDMA maintain absolute operational precedence. ' +
   'AI summaries are non-authoritative advisory aids.';

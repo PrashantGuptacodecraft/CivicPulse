@@ -147,7 +147,7 @@ export function OperationsMapView({
         ref={containerRef}
         role="application"
         tabIndex={0}
-        aria-label="CivIQ Operational Jurisdiction Map. Interactive vector map showing issues and clusters."
+        aria-label="CivicPulse Operational Jurisdiction Map. Interactive vector map showing issues and clusters."
         className="relative w-full h-[360px] sm:h-[460px] lg:h-[540px] overflow-hidden bg-[#F1F5F9] focus:outline-none focus:ring-2 focus:ring-primary"
       >
         {/* Real Leaflet Map Layer (Active in browser when real map mode is selected) */}

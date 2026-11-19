@@ -11,7 +11,7 @@ def test_root_endpoint() -> None:
     response = client.get("/")
     assert response.status_code == 200
     data: dict[str, Any] = response.json()
-    assert data["service"] == "CivIQ AI Gateway"
+    assert data["service"] == "CivicPulse AI Gateway"
     assert data["api_version"] == "v1"
     assert len(data["endpoints"]) == 7
 

@@ -257,7 +257,7 @@ export function CitizenReportForm() {
               Report Submitted Successfully
             </h1>
             <p className="text-sm text-text-secondary mt-2 max-w-md mx-auto">
-              Your civic report has been securely registered in CivIQ and dispatched for official verification.
+              Your civic report has been securely registered in CivicPulse and dispatched for official verification.
             </p>
           </div>
 

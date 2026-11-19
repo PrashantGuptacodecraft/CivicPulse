@@ -29,7 +29,7 @@ export function EmergencyBanner() {
               </h2>
             </div>
             <p className="text-xs sm:text-sm text-text-secondary leading-relaxed">
-              CivIQ is an asynchronous municipal triage platform, <strong>not an emergency dispatch service</strong>.
+              CivicPulse is an asynchronous municipal triage platform, <strong>not an emergency dispatch service</strong>.
               If you are reporting an active fire, crime in progress, gas leak, or critical accident, contact emergency responders immediately.
             </p>
           </div>

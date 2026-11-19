@@ -8,7 +8,7 @@ Define emergency UI principles:
    - Prominent emergency toggle/button on report screen
    - When marked emergency: simplified form, fewer required fields
    - Immediate official emergency handoff (call 112 link, prominent)
-   - CivIQ records as UNVERIFIED
+   - CivicPulse records as UNVERIFIED
    - Confirmation shows: 'This has been recorded. For immediate help, contact [official service].'
 
 3. Visual treatment:
@@ -18,9 +18,9 @@ Define emergency UI principles:
    - No decorative animations on emergency screens
    - Simplified UI: reduce non-essential elements
 
-4. CivIQ boundary:
-   - CivIQ is NOT a replacement for 112 or official emergency services
-   - UI must never suggest CivIQ handles emergency dispatch
+4. CivicPulse boundary:
+   - CivicPulse is NOT a replacement for 112 or official emergency services
+   - UI must never suggest CivicPulse handles emergency dispatch
    - Official emergency contact always visible in emergency context
    - AI remains advisory for emergency severity assessment
 

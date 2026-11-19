@@ -295,7 +295,7 @@ export const SEEDED_AFTER_ACTION_REVIEW = {
     `Duration of Critical Response: 04:30Z – 08:00Z (Ongoing Active Monitoring)`,
   operationalChronologySummary:
     `1. ${AAR_SOURCE_LABELS.CWC_HYDROLOGY_DATA} 03:45Z - CWC hydrology telemetry recorded 100% Khadakwasla reservoir level.\n` +
-    `2. ${AAR_SOURCE_LABELS.SACHET_NDMA_ALERT} 04:00Z - Official SACHET CAP flood alert ingested into CivIQ gateway.\n` +
+    `2. ${AAR_SOURCE_LABELS.SACHET_NDMA_ALERT} 04:00Z - Official SACHET CAP flood alert ingested into CivicPulse gateway.\n` +
     `3. ${AAR_SOURCE_LABELS.MUNICIPAL_DISPATCH_RECORD} 04:30Z - Pune DDMA activated Situation Room command matrix.\n` +
     `4. ${AAR_SOURCE_LABELS.FIELD_INSPECTION} 04:45Z - Vitthalwadi Primary School opened as designated flood shelter.\n` +
     `5. ${AAR_SOURCE_LABELS.CITIZEN_VERIFIED_REPORT} 05:10Z - Swapna Nagari senior citizen trapping reported via mobile civic portal.\n` +

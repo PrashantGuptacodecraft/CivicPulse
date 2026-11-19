@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Database Backup Script for CivIQ (PostgreSQL)
+# Database Backup Script for CivicPulse (PostgreSQL)
 # Phase 71: Performance, Resilience, and Observability Closure
 set -euo pipefail
 

@@ -101,7 +101,7 @@ export function SituationRoomDashboard({
           ],
           sourceCitations: [
             { label: '[SOURCE: SACHET_NDMA_ALERT]', detail: 'SACHET CAP Alert Stream' },
-            { label: '[SOURCE: MUNICIPAL_DISPATCH_RECORD]', detail: 'CivIQ Situation Room Logs' },
+            { label: '[SOURCE: MUNICIPAL_DISPATCH_RECORD]', detail: 'CivicPulse Situation Room Logs' },
           ],
         };
       }

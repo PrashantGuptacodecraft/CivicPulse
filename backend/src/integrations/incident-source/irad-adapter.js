@@ -56,7 +56,7 @@ export class IradOfficialAdapter extends BaseIncidentSourceAdapter {
   }
 
   /**
-   * Normalizes live government iRAD payload into canonical CivIQ format.
+   * Normalizes live government iRAD payload into canonical CivicPulse format.
    * Strips Aadhaar and sensitive PII.
    */
   normalizeRecord(raw = {}) {

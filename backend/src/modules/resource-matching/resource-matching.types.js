@@ -45,7 +45,7 @@ export const CAPACITY_FIT = Object.freeze({
 });
 
 export const DISASTER_RESOURCE_MATCHING_DISCLAIMER =
-  'CivIQ Resource Matching Advisory: Recommended allocations and fulfillment pathways are ' +
+  'CivicPulse Resource Matching Advisory: Recommended allocations and fulfillment pathways are ' +
   'deterministic operational recommendations designed to assist civic coordinators. ' +
   'Pursuant to the Disaster Management Act, 2005, sovereign emergency declarations and ' +
   'official tasking orders by NDMA/DDMA maintain absolute operational precedence. ' +

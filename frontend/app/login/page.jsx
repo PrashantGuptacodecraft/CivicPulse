@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * CivIQ Login Page
+ * CivicPulse Login Page
  *
  * Two tabs:
  *   1. Citizen — Phone OTP flow
@@ -278,7 +278,7 @@ function CitizenLoginTab() {
             </div>
 
             <p className="text-xs text-text-secondary">
-              Select an account or enter your email to continue to CivIQ.
+              Select an account or enter your email to continue to CivicPulse.
             </p>
 
             {/* 1-click Demo Account */}
@@ -427,7 +427,7 @@ function OfficialLoginTab() {
         disabled={loading}
         className="btn-press w-full h-11 bg-primary hover:bg-primary-hover disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold rounded-xl transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 text-sm"
       >
-        {loading ? 'Logging in…' : 'Login to CivIQ'}
+        {loading ? 'Logging in…' : 'Login to CivicPulse'}
       </button>
     </form>
   );
@@ -453,7 +453,7 @@ export default function LoginPage() {
                 </svg>
               </div>
               <div>
-                <h1 className="text-lg font-bold text-text-primary leading-tight">Sign in to CivIQ</h1>
+                <h1 className="text-lg font-bold text-text-primary leading-tight">Sign in to CivicPulse</h1>
                 <p className="text-xs text-text-tertiary">Civic Intelligence Platform</p>
               </div>
             </div>
@@ -490,14 +490,14 @@ export default function LoginPage() {
           <div className="px-6 pb-6 text-center space-y-2">
             {tab === 'citizen' && (
               <p className="text-xs text-text-tertiary">
-                New to CivIQ?{' '}
+                New to CivicPulse?{' '}
                 <Link href="/register" className="text-primary font-semibold hover:underline">
                   Create account
                 </Link>
               </p>
             )}
             <p className="text-[10px] text-text-tertiary">
-              By continuing, you agree to CivIQ&apos;s terms of service and privacy policy.
+              By continuing, you agree to CivicPulse&apos;s terms of service and privacy policy.
             </p>
           </div>
         </div>

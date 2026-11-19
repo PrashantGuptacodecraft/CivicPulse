@@ -5,7 +5,7 @@
 
 ## 1. Reliability & SRE Target Objectives (SLAs / SLOs / SLIs)
 
-CivIQ operates as public digital infrastructure for Indian civic grievance redressal and municipal disaster response. The platform adheres to strict service level objectives (SLOs):
+CivicPulse operates as public digital infrastructure for Indian civic grievance redressal and municipal disaster response. The platform adheres to strict service level objectives (SLOs):
 
 | Boundary | Service Level Indicator (SLI) | Service Level Objective (SLO) | Alert Threshold / Error Budget |
 |---|---|---|---|

@@ -1,11 +1,11 @@
-# CivIQ Production Pilot Demonstration Script
+# CivicPulse Production Pilot Demonstration Script
 **Pune Municipal Corporation (PMC) Pilot Walkthrough**
 
 ---
 
 ## 1. Scenario 1: Citizen Multilingual Voice Reporting
 - **Actor:** Priya Sharma (`CITIZEN`)
-- **Step 1:** Opens CivIQ portal in Marathi (`mr`).
+- **Step 1:** Opens CivicPulse portal in Marathi (`mr`).
 - **Step 2:** Clicks the microphone button and speaks: *"औंध बाणेर रस्त्यावर मोठा खड्डा पडला आहे, अपघात होऊ शकतो."*
 - **Step 3:** BHASHINI STT transcribes the speech to Marathi text and translates to English for departmental records.
 - **Step 4:** System attaches GPS coordinates (`18.5913, 73.7389`) and submits report `iss_pilot_001`.

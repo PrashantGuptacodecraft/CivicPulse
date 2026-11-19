@@ -1,7 +1,7 @@
 import { HotspotAnalytics } from '../../features/analytics/index.js';
 
 export const metadata = {
-  title: 'Hotspot Analytics — CivIQ',
+  title: 'Hotspot Analytics — CivicPulse',
   description: 'Detect geographic concentration of incidents using configurable spatial windows and temporal trends.',
 };
 

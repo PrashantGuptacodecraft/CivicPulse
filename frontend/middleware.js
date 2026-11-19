@@ -1,5 +1,5 @@
 /**
- * CivIQ Next.js Route Protection Middleware
+ * CivicPulse Next.js Route Protection Middleware
  *
  * Runs on the Edge runtime before every request.
  * - Public routes: /, /report, /map, /incidents, /login, /register

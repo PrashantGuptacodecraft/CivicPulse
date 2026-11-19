@@ -103,7 +103,7 @@ export function RapidIncidentForm({ onSubmit, isSubmitting = false }) {
               STATUS: UNVERIFIED
             </span>
             <h3 className="text-xl font-extrabold text-text-primary">
-              Emergency Incident Recorded in CivIQ
+              Emergency Incident Recorded in CivicPulse
             </h3>
           </div>
         </div>
@@ -134,8 +134,8 @@ export function RapidIncidentForm({ onSubmit, isSubmitting = false }) {
             Important Life Safety Instructions
           </h4>
           <p className="text-xs md:text-sm text-red-900 mt-1 leading-relaxed">
-            This incident has been recorded in CivIQ as <strong>UNVERIFIED</strong> to prevent blocking official response efforts.
-            CivIQ is not an authorized emergency dispatch center. If anyone is in immediate physical danger, contact emergency services directly.
+            This incident has been recorded in CivicPulse as <strong>UNVERIFIED</strong> to prevent blocking official response efforts.
+            CivicPulse is not an authorized emergency dispatch center. If anyone is in immediate physical danger, contact emergency services directly.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
             <a

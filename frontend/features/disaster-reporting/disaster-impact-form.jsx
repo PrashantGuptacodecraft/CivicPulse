@@ -160,7 +160,7 @@ export function DisasterImpactForm({
               <div>
                 <h3 className="font-extrabold text-lg text-white">Critical Emergency Help Needed?</h3>
                 <p className="text-sm text-red-50 mt-1">
-                  CivIQ is a civic tracking platform, not an emergency dispatch service. Dial 112 immediately.
+                  CivicPulse is a civic tracking platform, not an emergency dispatch service. Dial 112 immediately.
                 </p>
               </div>
               <a

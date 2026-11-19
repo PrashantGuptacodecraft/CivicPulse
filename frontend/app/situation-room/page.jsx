@@ -11,7 +11,7 @@ import { SEEDED_DISASTER_RESOURCES } from '../../../backend/src/modules/resource
 import { SEEDED_NEED_REQUESTS } from '../../../backend/src/modules/resource-matching/resource-matching.fixtures.js';
 
 export const metadata = {
-  title: 'Disaster Situation Room & Operations Command - CivIQ',
+  title: 'Disaster Situation Room & Operations Command - CivicPulse',
   description:
     'Real-time municipal disaster operations command matrix: alerts, impact clusters, blocked routes, needs, resources, response tasks, and AI-assisted after-action review.',
 };

@@ -1,6 +1,6 @@
-# CivIQ Design System Specification
+# CivicPulse Design System Specification
 
-This document defines the design tokens and component specifications for CivIQ. 
+This document defines the design tokens and component specifications for CivicPulse. 
 
 **MANDATORY RULE:** All future frontend phases MUST use these tokens. No arbitrary values or hardcoded hex codes are permitted in the implementation. All tokens should map directly to Tailwind theme extensions in `tailwind.config.ts`.
 
@@ -63,8 +63,8 @@ Background/foreground pairs must ensure adequate contrast:
 - **Info (Blue)**: Informational messages.
 - **Neutral (Gray)**: Draft, pending.
 
-## 8. CivIQ-Specific Semantic Colors
-CivIQ workflows require precise color mappings:
+## 8. CivicPulse-Specific Semantic Colors
+CivicPulse workflows require precise color mappings:
 - **Workflow Statuses**: `status-submitted`, `status-under-verification`, `status-verified`, `status-action-in-progress`, `status-resolution-submitted`, `status-citizen-verified`, `status-closed`, `status-needs-evidence`, `status-possible-duplicate`, `status-rejected`, `status-reopened`, `status-unverified-emergency`.
 - **Priorities**: `priority-critical`, `priority-high`, `priority-medium`, `priority-low`.
 - **Trust Contexts**: `trust-verified-identity`, `trust-basic-identity`.

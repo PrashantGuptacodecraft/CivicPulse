@@ -1,7 +1,7 @@
 import { OperationsMapContainer } from '@/features/operations-map';
 
 export const metadata = {
-  title: 'Operational Map - CivIQ',
+  title: 'Operational Map - CivicPulse',
   description: 'Real-time multi-department civic issue tracking, clustering, and jurisdiction boundary management.',
 };
 

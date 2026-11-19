@@ -53,7 +53,7 @@ export const AAR_STATUS = Object.freeze({
 });
 
 export const DISASTER_OPS_DISCLAIMER =
-  'CivIQ Disaster Situation Room Notice: This event command dashboard aggregates municipal alerts, ' +
+  'CivicPulse Disaster Situation Room Notice: This event command dashboard aggregates municipal alerts, ' +
   'field impact clusters, blocked routes, and resource allocations for operational coordination. ' +
   'Pursuant to the Disaster Management Act, 2005, sovereign emergency declarations and ' +
   'authoritative directives by the National Disaster Management Authority (NDMA) and ' +

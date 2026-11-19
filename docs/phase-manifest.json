@@ -5,7 +5,7 @@
     "goal": "Create docs/product/PRD.md with personas, problem, goals, boundaries, KPIs and non-goals.",
     "implementation": [
       "Create docs/product/PRD.md with personas, problem, goals, boundaries, KPIs and non-goals.",
-      "Define the core CivIQ promise: identity \u2192 evidence \u2192 verification \u2192 action \u2192 proof \u2192 learning.",
+      "Define the core CivicPulse promise: identity \u2192 evidence \u2192 verification \u2192 action \u2192 proof \u2192 learning.",
       "Define the first pilot jurisdiction and the India-wide capability target."
     ],
     "primary_files": [
@@ -969,7 +969,7 @@
     "goal": "Model authorized responder organizations and scoped access.",
     "implementation": [
       "Model authorized responder organizations and scoped access.",
-      "Add dispatch recommendation without pretending CivIQ is the official emergency dispatch center.",
+      "Add dispatch recommendation without pretending CivicPulse is the official emergency dispatch center.",
       "Audit sensitive incident access."
     ],
     "primary_files": [
@@ -1201,7 +1201,7 @@
       "CHANGELOG.md"
     ],
     "exit_checks": "Full regression, UAT sign-off and production smoke test.",
-    "required_commit": "release(phase-72): publish pilot-ready CivIQ",
+    "required_commit": "release(phase-72): publish pilot-ready CivicPulse",
     "stop_condition": "After the commit, stop and return the commit hash, tests executed, files changed and any unresolved limitations. Do not implement future phases."
   }
 ]

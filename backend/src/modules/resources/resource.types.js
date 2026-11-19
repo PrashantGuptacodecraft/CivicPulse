@@ -42,7 +42,7 @@ export const CAPACITY_UPDATE_SOURCE = Object.freeze({
 });
 
 export const DISASTER_RESOURCE_DISCLAIMER =
-  'CivIQ Disaster Resource & Shelter Notice: Emergency shelter allocations, medical camp operations, ' +
+  'CivicPulse Disaster Resource & Shelter Notice: Emergency shelter allocations, medical camp operations, ' +
   'and relief logistics operate under the statutory authority of the Municipal Corporation and ' +
   'District Disaster Management Authority (DDMA) pursuant to the Disaster Management Act, 2005. ' +
   'Displayed capacities are synchronized periodically for civic coordination; ' +

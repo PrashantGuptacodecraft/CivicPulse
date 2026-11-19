@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "civiq-ai"
 version = "0.1.0"
-description = "CivIQ AI Gateway"
+description = "CivicPulse AI Gateway"
 requires-python = ">=3.10"
 
 dependencies = [

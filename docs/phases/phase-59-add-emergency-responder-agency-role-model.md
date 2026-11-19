@@ -11,7 +11,7 @@ Model authorized responder organizations and scoped access.
 
 ## Implementation tasks
 - Model authorized responder organizations and scoped access.
-- Add dispatch recommendation without pretending CivIQ is the official emergency dispatch center.
+- Add dispatch recommendation without pretending CivicPulse is the official emergency dispatch center.
 - Audit sensitive incident access.
 
 ## Primary files / areas

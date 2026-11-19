@@ -165,7 +165,7 @@ export function IssueDetailDrawer({
                     Exact Evidence & Identity Redacted
                   </h4>
                   <p className="text-xs text-text-secondary mt-0.5 leading-relaxed">
-                    Under CivIQ citizen privacy safeguards, high-resolution forensic images, cryptographic SHA-256 hashes, and citizen phone numbers are restricted to authorized municipal officials.
+                    Under CivicPulse citizen privacy safeguards, high-resolution forensic images, cryptographic SHA-256 hashes, and citizen phone numbers are restricted to authorized municipal officials.
                   </p>
                 </div>
               </div>

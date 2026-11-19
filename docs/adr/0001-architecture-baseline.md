@@ -4,7 +4,7 @@
 Accepted
 
 ## Context
-CivIQ requires a highly scalable, accountable, and modular foundation to support the goals defined in the Phase 01 product baseline. The architecture must enable clear boundaries, reliable auditability, and safe AI integration for civic issue reporting and incident management.
+CivicPulse requires a highly scalable, accountable, and modular foundation to support the goals defined in the Phase 01 product baseline. The architecture must enable clear boundaries, reliable auditability, and safe AI integration for civic issue reporting and incident management.
 
 ## Decision
 We adopt the following baseline engineering principles and architecture rules:

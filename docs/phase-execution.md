@@ -2,7 +2,7 @@
 
 ## Purpose
 
-CivIQ is developed in small, reviewable milestones. Every phase must result in one coherent Git commit.
+CivicPulse is developed in small, reviewable milestones. Every phase must result in one coherent Git commit.
 
 ## Standard agent loop
 
@@ -34,7 +34,7 @@ If implementation discovers a requirement belonging to another phase:
 
 ## Emergency rule
 
-For emergency/disaster workflows, the system must support an immediate safe handoff to the appropriate official emergency channel while maintaining an `UNVERIFIED` CivIQ incident record. AI verification must not become a safety-critical blocking dependency.
+For emergency/disaster workflows, the system must support an immediate safe handoff to the appropriate official emergency channel while maintaining an `UNVERIFIED` CivicPulse incident record. AI verification must not become a safety-critical blocking dependency.
 
 ## Definition of done
 

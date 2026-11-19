@@ -369,7 +369,7 @@ describe('Phase 61: Disaster Event Model', () => {
       expect(res.body.success).toBe(true);
       expect(res.body.count).toBeGreaterThanOrEqual(3);
       expect(Array.isArray(res.body.disasters)).toBe(true);
-      expect(res.body.disclaimer).toContain('CivIQ Disaster Event Tracking');
+      expect(res.body.disclaimer).toContain('CivicPulse Disaster Event Tracking');
     });
 
     it('GET /disasters/concurrent returns concurrent active disasters with overlap matrix', async () => {

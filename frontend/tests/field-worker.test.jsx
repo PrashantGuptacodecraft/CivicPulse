@@ -20,10 +20,10 @@ describe('Field Worker Mobile PWA Experience (Phase 41)', () => {
             // InstallPrompt defaults to null if not triggered by event in SSR, so test static structure
             const html = renderToStaticMarkup(<aside role="banner" className="bg-primary text-text-inverse p-4">
           <button type="button" className="min-h-[44px] px-4">
-            Install CivIQ Field App
+            Install CivicPulse Field App
           </button>
         </aside>);
-            expect(html).toContain('Install CivIQ Field App');
+            expect(html).toContain('Install CivicPulse Field App');
             expect(html).toContain('min-h-[44px]');
         });
     });

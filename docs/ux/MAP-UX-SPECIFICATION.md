@@ -1,6 +1,6 @@
 # Map UX Specification
 
-Define the CivIQ map UX:
+Define the CivicPulse map UX:
 
 1. Provider: Use a map provider adapter (Mapbox or Google Maps). Provider must be swappable.
 

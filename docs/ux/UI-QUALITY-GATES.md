@@ -1,6 +1,6 @@
-# CivIQ UI Quality Gates
+# CivicPulse UI Quality Gates
 
-This document defines the frontend phase exit checks. Any future frontend phase or coding agent MUST pass ALL of the following checks before completion.
+This document defines the frontend quality exit checks. All frontend contributions must pass the following checks.
 
 ## Responsive Checks
 - [ ] 320px viewport works (no overflow, readable, usable)
@@ -66,7 +66,7 @@ This document defines the frontend phase exit checks. Any future frontend phase 
 ## Trust and Safety Checks
 - [ ] AI recommendations not presented as unquestionable truth
 - [ ] Emergency handoff to official services clearly visible
-- [ ] CivIQ not presented as replacement for official services
+- [ ] CivicPulse not presented as replacement for official services
 - [ ] Sensitive information protected by default
 - [ ] Verification status clearly visible
 

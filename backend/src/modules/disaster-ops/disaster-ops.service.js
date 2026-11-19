@@ -492,7 +492,7 @@ export class DisasterOpsService {
     const sourceCitations = [
       { label: AAR_SOURCE_LABELS.SACHET_NDMA_ALERT, detail: 'SACHET / NDMA Common Alerting Protocol (CAP) Ingestion Stream' },
       { label: AAR_SOURCE_LABELS.CWC_HYDROLOGY_DATA, detail: 'Central Water Commission Reservoir & Discharge Telemetry' },
-      { label: AAR_SOURCE_LABELS.MUNICIPAL_DISPATCH_RECORD, detail: 'CivIQ Situation Room Task Dispatch & Tracking Matrix' },
+      { label: AAR_SOURCE_LABELS.MUNICIPAL_DISPATCH_RECORD, detail: 'CivicPulse Situation Room Task Dispatch & Tracking Matrix' },
       { label: AAR_SOURCE_LABELS.FIELD_INSPECTION, detail: 'On-scene Inspector Verification & Shelter Logs' },
       { label: AAR_SOURCE_LABELS.CITIZEN_VERIFIED_REPORT, detail: 'Civic Impact Reports and Verification Evidence' },
     ];

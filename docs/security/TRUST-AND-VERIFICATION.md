@@ -3,7 +3,7 @@
 ## Separate three concepts
 
 ### Identity trust
-How confidently CivIQ knows who the reporting account is.
+How confidently CivicPulse knows who the reporting account is.
 
 Signals may include mobile OTP, email verification, Google identity, passkeys and authorized strong identity providers. Do not treat Google login as proof of legal identity.
 
@@ -38,7 +38,7 @@ Normal issue: automated checks → verifier review when needed → action.
 
 High-impact issue: automated checks → human verification → action.
 
-Emergency issue: immediate safe emergency handoff + CivIQ `UNVERIFIED` incident → responder/authority verification.
+Emergency issue: immediate safe emergency handoff + CivicPulse `UNVERIFIED` incident → responder/authority verification.
 
 ## Important rule
 AI confidence is not truth. Confidence is a decision-support signal.

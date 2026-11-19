@@ -50,7 +50,7 @@ describe('Phase 44: Operational Map & Authorization Tests', () => {
 
       // Accessible application role
       expect(html).toContain('role="application"');
-      expect(html).toContain('CivIQ Operational Jurisdiction Map');
+      expect(html).toContain('CivicPulse Operational Jurisdiction Map');
 
       // Jurisdiction boundaries
       expect(html).toContain('PMC (Pune Municipal Corp)');

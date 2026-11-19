@@ -1,4 +1,4 @@
-// CivIQ Database Schema — Foundation
+// CivicPulse Database Schema — Foundation
 // Conventions:
 //   - Primary keys: CUID2 (string, @default(cuid()))
 //   - Timestamps: createdAt / updatedAt on every table
@@ -660,7 +660,7 @@ enum IntegrationType {
   THIRD_PARTY_SERVICE
 }
 
-/// A data source or remote system providing data into CivIQ
+/// A data source or remote system providing data into CivicPulse
 model IntegrationSource {
   id            String          @id @default(cuid())
   name          String

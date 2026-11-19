@@ -365,7 +365,7 @@ export class IncidentService {
           actorId: reporter.reporterId,
           notes: status === INCIDENT_STATUS.UNVERIFIED
             ? 'Incident initially recorded as UNVERIFIED via emergency workflow'
-            : 'Incident initially recorded in CivIQ',
+            : 'Incident initially recorded in CivicPulse',
         },
       ],
       metadata: data.metadata || {},
@@ -422,7 +422,7 @@ export class IncidentService {
       incidentId: incident.id,
       incidentNumber: incident.incidentNumber,
       type: INCIDENT_NOTIFICATION_TYPES.INCIDENT_RECORDED_UNVERIFIED,
-      title: 'Incident Recorded in CivIQ',
+      title: 'Incident Recorded in CivicPulse',
       message: `Your report #${incident.incidentNumber} is recorded as ${status}. For life-threatening emergencies, dial 112 immediately.`,
       channel: 'IN_APP',
       recipientRole: 'CITIZEN',

@@ -1,1 +1,1 @@
-"""CivIQ AI Gateway API module."""
+"""CivicPulse AI Gateway API module."""

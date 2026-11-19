@@ -59,8 +59,8 @@ export const RELIEF_NEED_TYPES = Object.freeze({
  * Statutory safety disclaimer per ADR 0002 and docs/phase-execution.md emergency rule.
  */
 export const DISASTER_IMPACT_DISCLAIMER =
-  'CivIQ Disaster Impact Reporting Notice: Reports submitted here enter the civic coordination system ' +
+  'CivicPulse Disaster Impact Reporting Notice: Reports submitted here enter the civic coordination system ' +
   'with an initial UNVERIFIED status for immediate municipal awareness. ' +
-  'CivIQ is not an official emergency dispatch service. ' +
+  'CivicPulse is not an official emergency dispatch service. ' +
   'For active life-threatening emergencies, stranded persons, fire, or acute medical distress, ' +
   'immediately contact 112 (National Emergency), 101 (Fire), or 108 (Ambulance).';

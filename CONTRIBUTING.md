@@ -1,4 +1,4 @@
-# Contributing to CivIQ
+# Contributing to CivicPulse
 
 Development is phase-gated. Read `AGENTS.md` before changes.
 

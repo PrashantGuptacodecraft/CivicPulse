@@ -1,7 +1,7 @@
 {
-  "name": "CivIQ Field Worker",
-  "short_name": "CivIQ Field",
-  "description": "Mobile-first field task management, navigation and municipal remediation for CivIQ workers.",
+  "name": "CivicPulse Field Worker",
+  "short_name": "CivicPulse Field",
+  "description": "Mobile-first field task management, navigation and municipal remediation for CivicPulse workers.",
   "start_url": "/field",
   "display": "standalone",
   "background_color": "#F8FAFC",

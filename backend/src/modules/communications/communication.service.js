@@ -158,7 +158,7 @@ export class CommunicationService {
       variables,
       emergencyDisclaimer: EMERGENCY_DISCLAIMER_TEXT[lang] || EMERGENCY_DISCLAIMER_TEXT.en,
       emergencyContacts: EMERGENCY_HANDOFF_CONTACTS,
-      doNotRelyOnCivIQForImmediateRescue: true,
+      doNotRelyOnCivicPulseForImmediateRescue: true,
       isAiDraft: false,
       reviewStatus: REVIEW_STATUS.PRE_APPROVED_TEMPLATE,
       publishStatus: PUBLISH_STATUS.DRAFT,
@@ -219,7 +219,7 @@ export class CommunicationService {
       publishStatus: PUBLISH_STATUS.DRAFT,
       emergencyDisclaimer: EMERGENCY_DISCLAIMER_TEXT[lang] || EMERGENCY_DISCLAIMER_TEXT.en,
       emergencyContacts: EMERGENCY_HANDOFF_CONTACTS,
-      doNotRelyOnCivIQForImmediateRescue: true,
+      doNotRelyOnCivicPulseForImmediateRescue: true,
       createdAt: new Date().toISOString(),
     };
 

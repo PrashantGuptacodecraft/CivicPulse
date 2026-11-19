@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Database Restore & Disaster Recovery Drill Script for CivIQ
+# Database Restore & Disaster Recovery Drill Script for CivicPulse
 # Phase 71: Performance, Resilience, and Observability Closure
 set -euo pipefail
 

@@ -1,8 +1,8 @@
-# CivIQ: Component Specification
+# CivicPulse: Component Specification
 
-This document defines the future reusable component library for CivIQ. It provides structural and behavioral specifications.
+This document defines the reusable component architecture for CivicPulse. It provides structural and behavioral specifications.
 
-> **Note to Coding Agents:** Do NOT implement code directly from this file. Use this as the blueprint for creating actual React/Tailwind components.
+> **Blueprint:** Use this specification as the design blueprint for React and Tailwind components.
 
 ---
 

@@ -46,7 +46,7 @@ export function InstallPrompt({ onDismiss }) {
           📱
         </div>
         <div>
-          <div className="font-bold">Install CivIQ Field App</div>
+          <div className="font-bold">Install CivicPulse Field App</div>
           <div className="text-xs text-white/80">
             Fast outdoor access, offline support &amp; instant GPS navigation
           </div>

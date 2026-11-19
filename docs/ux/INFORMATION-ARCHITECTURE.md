@@ -1,9 +1,9 @@
-# CivIQ Information Architecture (IA)
+# CivicPulse Information Architecture (IA)
 
-**Notice to AI Coding Agents:** This document outlines the structural hierarchy and navigation of the CivIQ platform. You MUST adhere to these role-based paths and navigation patterns when scaffolding pages, routing, or building layout components. 
+**Architecture Overview:** This document outlines the structural hierarchy and navigation of the CivicPulse platform. Adhere to these role-based paths and navigation patterns across pages, routing, and layout components. 
 
 ## 1. Navigation Philosophy
-**Role-Based Navigation:** CivIQ serves multiple distinct user types. Navigation is heavily tailored to the user's role. A Citizen does not see Authority menus, and a Field Worker gets an optimized field-ops interface.
+**Role-Based Navigation:** CivicPulse serves multiple distinct user types. Navigation is tailored to the user's role. A Citizen does not see Authority menus, and a Field Worker gets an optimized field-ops interface.
 
 ## 2. Global Navigation Structure
 - **Mobile Devices**: Bottom navigation bar (maximum 5 items). Overflow items go into a "More" menu or hamburger drawer.

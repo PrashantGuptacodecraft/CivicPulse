@@ -111,7 +111,7 @@ export type RoleAssignment = $Result.DefaultSelection<Prisma.$RoleAssignmentPayl
 export type OfficialInvite = $Result.DefaultSelection<Prisma.$OfficialInvitePayload>
 /**
  * Model IntegrationSource
- * A data source or remote system providing data into CivIQ
+ * A data source or remote system providing data into CivicPulse
  */
 export type IntegrationSource = $Result.DefaultSelection<Prisma.$IntegrationSourcePayload>
 /**

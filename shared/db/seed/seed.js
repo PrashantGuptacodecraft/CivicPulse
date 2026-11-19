@@ -69,7 +69,7 @@ async function main() {
             role: Role.PLATFORM_SUPER_ADMIN,
             profile: {
                 create: {
-                    displayName: 'CivIQ Admin',
+                    displayName: 'CivicPulse Admin',
                     state: 'Delhi',
                     city: 'New Delhi',
                 },

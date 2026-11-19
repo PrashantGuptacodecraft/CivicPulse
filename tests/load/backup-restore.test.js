@@ -10,7 +10,7 @@ describe('Backup and Restore Drill Verification (Phase 71)', () => {
   it('validates database snapshot generation, encryption checksum, and restore idempotency', () => {
     // 1. Simulate database snapshot dump metadata
     const sampleDbDump = JSON.stringify({
-      version: 'PostgreSQL 16.2 / CivIQ Schema v1.0.0',
+      version: 'PostgreSQL 16.2 / CivicPulse Schema v1.0.0',
       tables: ['users', 'issues', 'jurisdictions', 'verification_history', 'audit_logs'],
       recordCounts: {
         users: 1500,

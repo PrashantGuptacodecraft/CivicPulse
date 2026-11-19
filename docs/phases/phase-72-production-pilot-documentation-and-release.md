@@ -25,7 +25,7 @@ Seed a realistic pilot dataset; complete UAT scenarios for every role.
 Full regression, UAT sign-off and production smoke test.
 
 ## Required commit
-`release(phase-72): publish pilot-ready CivIQ`
+`release(phase-72): publish pilot-ready CivicPulse`
 
 ## Stop condition
 After the commit, stop and return the commit hash, tests executed, files changed and any unresolved limitations. Do not implement future phases.

@@ -1,4 +1,4 @@
-# CivIQ Pre-Flight Production Security & Deployment Checklist
+# CivicPulse Pre-Flight Production Security & Deployment Checklist
 **Phase 72: Release Readiness**
 
 ---

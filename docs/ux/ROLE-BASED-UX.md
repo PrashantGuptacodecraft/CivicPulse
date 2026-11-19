@@ -1,13 +1,13 @@
-# CivIQ: Role-Based UX Patterns
+# CivicPulse: Role-Based UX Patterns
 
-This document defines the mobile-first UX patterns for each primary role in the CivIQ platform. Future coding agents must follow these patterns when implementing role-specific features.
+This document defines the mobile-first UX patterns for each primary role in the CivicPulse platform. Follow these patterns when implementing role-specific features.
 
 ## Core Trust Rules (Platform-Wide)
 - AI is advisory only, never autonomous for high-impact decisions.
 - Identity verification ≠ truthful report.
 - AI recommendation ≠ official decision.
 - Emergency actions must never be blocked by decorative UI.
-- CivIQ does not replace official emergency services (112, SACHET, CPGRAMS, iRAD).
+- CivicPulse does not replace official emergency services (112, SACHET, CPGRAMS, iRAD).
 
 ---
 

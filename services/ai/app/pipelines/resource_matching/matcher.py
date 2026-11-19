@@ -21,7 +21,7 @@ from app.pipelines.resource_matching.schemas import (
 EARTH_RADIUS_KM = 6371.0
 
 DISASTER_RESOURCE_MATCHING_DISCLAIMER = (
-    "CivIQ AI Resource Matching Recommendation: Matches are deterministically "
+    "CivicPulse AI Resource Matching Recommendation: Matches are deterministically "
     "calculated recommendations to assist municipal coordinators. Sovereign emergency "
     "directives and official command decisions by NDMA/DDMA maintain absolute precedence. "
     "An authorized human disaster coordinator must accept and confirm all assignments."

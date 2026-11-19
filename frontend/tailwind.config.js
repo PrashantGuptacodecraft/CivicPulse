@@ -70,7 +70,7 @@ const config = {
                     info: '#3B82F6',
                     neutral: '#64748B',
                 },
-                // CivIQ-specific workflow colors
+                // CivicPulse-specific workflow colors
                 workflow: {
                     pending: '#64748B',
                     'in-review': '#3B82F6',

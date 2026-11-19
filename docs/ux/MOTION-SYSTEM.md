@@ -1,9 +1,9 @@
-# CivIQ Motion & Animation System
+# CivicPulse Motion & Animation System
 
-**Notice to AI Coding Agents:** This document is a strict specification. All animations and transitions implemented in the CivIQ platform MUST adhere to these rules. Decorative or non-purposeful animations are forbidden. Do not introduce new animation libraries without an explicit ADR (Architecture Decision Record).
+**Engineering Guidelines:** All animations and transitions implemented in the CivicPulse platform must adhere to these rules. Decorative or non-purposeful animations are avoided.
 
 ## 1. Philosophy
-Animation in CivIQ is **purposeful**. It aids understanding, provides immediate feedback, and creates spatial continuity. It must never be decorative-only. CivIQ handles emergency and high-impact civic actions; animations must never block, delay, or confuse user interactions.
+Animation in CivicPulse is **purposeful**. It aids understanding, provides immediate feedback, and creates spatial continuity. CivicPulse handles emergency and civic actions; animations must never block, delay, or confuse user interactions.
 
 ## 2. Primary Animation Library
 - **Framer Motion (React)**: Use for orchestrated, physics-based, or complex layout transitions.

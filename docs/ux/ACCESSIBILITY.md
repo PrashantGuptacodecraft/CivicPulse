@@ -1,6 +1,6 @@
-# CivIQ Accessibility (a11y) Standards
+# CivicPulse Accessibility (a11y) Standards
 
-**Notice to AI Coding Agents:** Accessibility in CivIQ is mandatory, not optional. As a civic platform, we serve all citizens, including those with disabilities, in potentially stressful or emergency situations. You MUST follow these guidelines in every component you write.
+**Developer Notice:** Accessibility in CivicPulse is mandatory, not optional. As a civic platform, we serve all citizens, including those with disabilities, in potentially stressful or emergency situations. Follow these guidelines in every component.
 
 ## 1. Target Compliance
 - **WCAG 2.2 AA** compliance is required where practical and technically feasible across the platform.

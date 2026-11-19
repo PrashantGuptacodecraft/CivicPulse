@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * CivIQ Citizen Registration Page
+ * CivicPulse Citizen Registration Page
  *
  * Flow: Phone → OTP → Name + Terms → Account Created → Login
  */
@@ -97,7 +97,7 @@ export default function RegisterPage() {
 
           {/* Header */}
           <div className="px-6 pt-7 pb-5 border-b border-border-primary/50">
-            <h1 className="text-lg font-bold text-text-primary mb-1">Create CivIQ Account</h1>
+            <h1 className="text-lg font-bold text-text-primary mb-1">Create CivicPulse Account</h1>
             <p className="text-xs text-text-tertiary">Report issues, track resolutions, hold officials accountable.</p>
 
             {/* Step indicators */}
@@ -219,7 +219,7 @@ export default function RegisterPage() {
                     className="mt-0.5 h-4 w-4 rounded border-border-primary text-primary focus:ring-primary"
                   />
                   <span className="text-xs text-text-secondary leading-relaxed">
-                    I agree to CivIQ&apos;s terms of service and consent to civic data being used for issue resolution by relevant municipal authorities.
+                    I agree to CivicPulse&apos;s terms of service and consent to civic data being used for issue resolution by relevant municipal authorities.
                   </span>
                 </label>
 

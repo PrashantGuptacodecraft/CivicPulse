@@ -32,4 +32,4 @@ export const AUTHORIZED_EXPORT_ROLES = new Set([
 ]);
 
 export const REDACTION_NOTICE =
-  'All citizen PII, telephone numbers, emails, and personal identifiers have been redacted from this export in compliance with CivIQ Data Protection standards.';
+  'All citizen PII, telephone numbers, emails, and personal identifiers have been redacted from this export in compliance with CivicPulse Data Protection standards.';

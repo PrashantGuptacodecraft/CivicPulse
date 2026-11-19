@@ -1,13 +1,13 @@
-# CivIQ Product Requirements Document
+# CivicPulse Product Requirements Document
 
 ## Product
-**CivIQ — AI-Assisted Civic, Incident & Disaster Intelligence Platform**
+**CivicPulse — AI-Assisted Civic, Incident & Disaster Intelligence Platform**
 
 ## Core promise
 **Identity → Evidence → Verification → Action → Proof → Learning**
 
 ## Problem
-Existing civic and emergency ecosystems already provide reporting, grievance handling and official alerts. CivIQ focuses on the operational gap between receiving information and producing a trustworthy, accountable, verifiable action.
+Existing civic and emergency ecosystems already provide reporting, grievance handling and official alerts. CivicPulse focuses on the operational gap between receiving information and producing a trustworthy, accountable, verifiable action.
 
 ## Primary personas
 - Citizen / resident
@@ -17,7 +17,7 @@ Existing civic and emergency ecosystems already provide reporting, grievance han
 - Field worker
 - Disaster/emergency coordinator
 - District/ULB/state platform administrator
-- CivIQ platform administrator
+- CivicPulse platform administrator
 - Auditor
 
 ## Core capabilities
@@ -33,7 +33,7 @@ Existing civic and emergency ecosystems already provide reporting, grievance han
 10. Analytics, hotspot detection and after-action reporting.
 
 ## Boundaries
-- CivIQ does not replace 112, SACHET, CPGRAMS, iRAD/eDAR, official disaster authorities or municipal systems.
+- CivicPulse does not replace 112, SACHET, CPGRAMS, iRAD/eDAR, official disaster authorities or municipal systems.
 - Official alerts remain authoritative.
 - AI does not autonomously make high-impact or life-critical decisions.
 - Emergency reports use a fast path and can be marked `UNVERIFIED` while triggering an official emergency handoff.
@@ -65,7 +65,7 @@ The architecture is national-ready: India → State/UT → District → Local Bo
 
 ## UX vision
 
-CivIQ is a modern, trustworthy, mobile-first civic technology platform. The experience must feel premium, fast, clear, professional and human. All user-facing features must be designed mobile-first, targeting Android phones and iPhones as the primary devices, then scaling up to tablet, laptop and desktop. See `docs/ux/README.md` for the complete UX documentation.
+CivicPulse is a modern, trustworthy, mobile-first civic technology platform. The experience must feel premium, fast, clear, professional and human. All user-facing features must be designed mobile-first, targeting Android phones and iPhones as the primary devices, then scaling up to tablet, laptop and desktop. See `docs/ux/README.md` for the complete UX documentation.
 
 ## Responsive requirement
 
@@ -89,7 +89,7 @@ Each persona has a tailored mobile-first navigation and workflow. Citizen, field
 
 ## Emergency-first UX
 
-Emergency workflows must remain immediately accessible. Emergency reports use a simplified form, display the official emergency handoff prominently, and record as `UNVERIFIED`. CivIQ must never suggest it replaces official emergency dispatch. See `docs/ux/EMERGENCY-UX.md`.
+Emergency workflows must remain immediately accessible. Emergency reports use a simplified form, display the official emergency handoff prominently, and record as `UNVERIFIED`. CivicPulse must never suggest it replaces official emergency dispatch. See `docs/ux/EMERGENCY-UX.md`.
 
 ## AI transparency UX
 

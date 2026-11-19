@@ -79,7 +79,7 @@ describe('Phase 60: Public Safety Communication Templates & Safety Governance', 
       expect(rendered.emergencyDisclaimer).toContain('call 112 immediately');
       expect(rendered.emergencyContacts.NATIONAL_EMERGENCY).toBe('112');
       expect(rendered.emergencyContacts.AMBULANCE_EMS).toBe('108');
-      expect(rendered.doNotRelyOnCivIQForImmediateRescue).toBe(true);
+      expect(rendered.doNotRelyOnCivicPulseForImmediateRescue).toBe(true);
 
       // Pre-approved template initial status
       expect(rendered.reviewStatus).toBe(REVIEW_STATUS.PRE_APPROVED_TEMPLATE);
@@ -281,7 +281,7 @@ describe('Phase 60: Public Safety Communication Templates & Safety Governance', 
       expect(res.body.success).toBe(true);
       expect(res.body.alert.title).toContain('Watermain Burst');
       expect(res.body.alert.emergencyDisclaimer).toContain('call 112 immediately');
-      expect(res.body.alert.doNotRelyOnCivIQForImmediateRescue).toBe(true);
+      expect(res.body.alert.doNotRelyOnCivicPulseForImmediateRescue).toBe(true);
     });
 
     it('POST /communications/render fails with 400 when variables are missing', async () => {

@@ -1,13 +1,13 @@
 # Research & Interoperability Reference
 
-These are reference systems/standards CivIQ is designed to coexist with or integrate through adapters where officially permitted.
+These are reference systems/standards CivicPulse is designed to coexist with or integrate through adapters where officially permitted.
 
-| Area | Reference | Use in CivIQ |
+| Area | Reference | Use in CivicPulse |
 |---|---|---|
 | Public grievances | CPGRAMS / PG Portal | Understand grievance lifecycle, organization routing, feedback/appeals and AI-assisted analysis boundary |
-| Emergency response | 112 ERSS | Official emergency handoff; never position CivIQ as replacement |
-| Disaster alerts | NDMA SACHET | Official geo-targeted alerts; CivIQ consumes/links to alerts and adds ground situation intelligence |
-| Accident data | iRAD/eDAR | Reference for road-accident ecosystem; CivIQ focuses on incident intake/correlation rather than replacing the system |
+| Emergency response | 112 ERSS | Official emergency handoff; never position CivicPulse as replacement |
+| Disaster alerts | NDMA SACHET | Official geo-targeted alerts; CivicPulse consumes/links to alerts and adds ground situation intelligence |
+| Accident data | iRAD/eDAR | Reference for road-accident ecosystem; CivicPulse focuses on incident intake/correlation rather than replacing the system |
 | Urban command | ICCC maturity guidance | Reference for SLA, GIS, analytics, escalation and operations concepts |
 | Urban data | IUDX | Adapter/interoperability reference for urban datasets |
 | Jurisdiction | Local Government Directory | Reference model for state/district/local-body/ward/panchayat hierarchy and codes |

@@ -82,10 +82,10 @@ export const SENSITIVE_ACCESS_ACTIONS = {
 
 /**
  * Statutory Boundary Notice:
- * CivIQ produces algorithmic advisory dispatch recommendations to support triage and cross-agency correlation.
- * CivIQ does NOT act as the statutory Emergency CAD center or replace MoRTH/Police emergency dispatchers.
+ * CivicPulse produces algorithmic advisory dispatch recommendations to support triage and cross-agency correlation.
+ * CivicPulse does NOT act as the statutory Emergency CAD center or replace MoRTH/Police emergency dispatchers.
  */
 export const DISPATCH_ADVISORY_DISCLAIMER =
-  'ADVISORY NOTICE: CivIQ dispatch recommendations are algorithmic operational aids to assist emergency triage ' +
-  'and inter-agency correlation. CivIQ does not operate as an official statutory Computer-Aided Dispatch (CAD) or emergency command centre. ' +
+  'ADVISORY NOTICE: CivicPulse dispatch recommendations are algorithmic operational aids to assist emergency triage ' +
+  'and inter-agency correlation. CivicPulse does not operate as an official statutory Computer-Aided Dispatch (CAD) or emergency command centre. ' +
   'Statutory emergency deployment must be initiated through official ERSS (Call 112) or agency CAD terminals.';

@@ -1,8 +1,6 @@
-# CivIQ: Screen Inventory
+# CivicPulse: Screen Inventory
 
-This document serves as the canonical screen inventory for the CivIQ project. It defines the purpose, layout, and states for all required screens.
-
-> **Note to Coding Agents:** Do NOT implement these screens directly from this file. This is a documentation reference only. Check the phase reference to see when a screen should be implemented.
+This document serves as the canonical screen inventory for the CivicPulse project. It defines the purpose, layout, and states for all screens across the platform.
 
 ---
 

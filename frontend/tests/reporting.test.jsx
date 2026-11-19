@@ -8,7 +8,7 @@ describe('Citizen Reporting UI Components', () => {
         it('renders emergency notice with life-safety instructions', () => {
             const html = renderToStaticMarkup(<EmergencyBanner />);
             expect(html).toContain('Is this a life-threatening emergency?');
-            expect(html).toContain('CivIQ is an asynchronous municipal triage platform');
+            expect(html).toContain('CivicPulse is an asynchronous municipal triage platform');
         });
         it('provides high-visibility one-touch 112 emergency phone link', () => {
             const html = renderToStaticMarkup(<EmergencyBanner />);

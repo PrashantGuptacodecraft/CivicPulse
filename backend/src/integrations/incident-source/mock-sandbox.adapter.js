@@ -179,7 +179,7 @@ export class MockSandboxIncidentAdapter extends BaseIncidentSourceAdapter {
   }
 
   /**
-   * Normalizes raw feed payload into the canonical CivIQ official accident contract.
+   * Normalizes raw feed payload into the canonical CivicPulse official accident contract.
    */
   normalizeRecord(raw = {}) {
     const sanitized = this.sanitizeRawPayload(raw);

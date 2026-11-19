@@ -94,7 +94,7 @@ export class BaseIncidentSourceAdapter {
   }
 
   /**
-   * Normalizes raw external feed payload into standardized CivIQ official accident contract.
+   * Normalizes raw external feed payload into standardized CivicPulse official accident contract.
    * @param {Object} raw - Raw payload from external source feed
    * @returns {Object} Normalized accident record
    */

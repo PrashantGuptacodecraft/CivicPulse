@@ -1,10 +1,10 @@
-# CivIQ Project Final Release Report
+# CivicPulse Project Final Release Report
 **Milestone: Pilot-Ready Public Digital Infrastructure (Phases 00–72 Complete)**
 
 ---
 
 ## 1. Executive Summary
-CivIQ is an AI-powered, mobile-first civic intelligence and disaster management platform designed for municipal corporations and state disaster authorities across India. 
+CivicPulse is an AI-powered, mobile-first civic intelligence and disaster management platform designed for municipal corporations and state disaster authorities across India. 
 
 Over 72 phase-gated engineering milestones, the platform was bootstrapped from architectural foundations into a production-hardened platform delivering:
 1. **Inclusive Citizen Reporting:** Multi-lingual voice reporting (12 Indian languages via BHASHINI), GPS geotagging, and low-bandwidth offline synchronization.

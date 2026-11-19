@@ -1,4 +1,4 @@
-# CivIQ 72-Phase Index
+# CivicPulse 72-Phase Index
 
 | Phase | Title | Required commit |
 |---:|---|---|
@@ -73,4 +73,4 @@
 | 69 | [Add offline field sync](./phase-69-add-offline-field-sync.md) | `feat(phase-69): add offline field sync` |
 | 70 | [Security hardening and threat-model closure](./phase-70-security-hardening-and-threat-model-closure.md) | `security(phase-70): harden production security` |
 | 71 | [Performance, resilience and observability closure](./phase-71-performance-resilience-and-observability-closure.md) | `perf(phase-71): harden performance and resilience` |
-| 72 | [Production pilot, documentation and release](./phase-72-production-pilot-documentation-and-release.md) | `release(phase-72): publish pilot-ready CivIQ` |
+| 72 | [Production pilot, documentation and release](./phase-72-production-pilot-documentation-and-release.md) | `release(phase-72): publish pilot-ready CivicPulse` |

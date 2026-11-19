@@ -41,7 +41,7 @@ export function EmergencyHandoffBanner({ onHandoffTriggered, isHandedOff = false
               </h2>
             </div>
             <p className="text-sm md:text-base text-red-50 mt-1 leading-relaxed">
-              CivIQ is a municipal incident reporting network, <strong>not an official emergency dispatch service</strong>.
+              CivicPulse is a municipal incident reporting network, <strong>not an official emergency dispatch service</strong>.
               If anyone is injured, trapped, or under active hazard (fire, gas leak, live wires), contact emergency responders immediately.
             </p>
           </div>
@@ -87,7 +87,7 @@ export function EmergencyHandoffBanner({ onHandoffTriggered, isHandedOff = false
               clipRule="evenodd"
             />
           </svg>
-          <span>Official emergency handoff registered with CAD-112 hotline. Local CivIQ record held in UNVERIFIED state.</span>
+          <span>Official emergency handoff registered with CAD-112 hotline. Local CivicPulse record held in UNVERIFIED state.</span>
         </div>
       )}
     </aside>

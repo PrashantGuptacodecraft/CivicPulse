@@ -1,12 +1,12 @@
 /**
- * CivIQ Dispatch Recommendation Engine
+ * CivicPulse Dispatch Recommendation Engine
  * Phase 59: Add emergency responder/agency role model
  *
  * Computes advisory multi-agency dispatch recommendations based on incident severity,
  * reported casualties, environmental hazards, and vehicle involvements.
  *
  * STATUTORY SAFETY BOUNDARY (ADR 0002):
- * CivIQ is an operational and analytical triage aid. CivIQ does NOT operate as an official
+ * CivicPulse is an operational and analytical triage aid. CivicPulse does NOT operate as an official
  * statutory Computer-Aided Dispatch (CAD) or emergency command centre. All recommendations
  * carry mandatory advisory disclaimers and require official ERSS (Call 112) or agency CAD execution.
  */
@@ -27,7 +27,7 @@ export class DispatchRecommendationEngine {
   /**
    * Generates multi-agency dispatch recommendations for an incident.
    *
-   * @param {Object} incident - Canonical CivIQ incident object
+   * @param {Object} incident - Canonical CivicPulse incident object
    * @param {Array<Object>} availableAgencies - List of registered authorized responder organizations
    * @returns {Object} Structured advisory dispatch recommendation
    */

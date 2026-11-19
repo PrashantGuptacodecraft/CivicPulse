@@ -1,4 +1,4 @@
-# CivIQ API Specification (Pilot Release v1.0.0)
+# CivicPulse API Specification (Pilot Release v1.0.0)
 **Phase 72: Production Pilot, Documentation & Release**
 
 ---

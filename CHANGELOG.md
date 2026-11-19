@@ -1,11 +1,11 @@
 # Changelog
 
-All notable changes to CivIQ are documented in this file.
+All notable changes to CivicPulse are documented in this file.
 
 ## [1.0.0-pilot] - 2026-11-03
 
 ### Release Summary
-Official pilot release of the CivIQ Civic Intelligence and Disaster Management Platform, completing all 72 phase-gated milestones.
+Official pilot release of the CivicPulse Civic Intelligence and Disaster Management Platform, completing all 72 phase-gated milestones.
 
 ### Added
 - **Production Pilot Dataset & UAT Scenarios (Phase 72):**

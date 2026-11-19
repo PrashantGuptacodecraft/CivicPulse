@@ -49,11 +49,11 @@ export const EMERGENCY_HANDOFF_CONTACTS = {
 
 /**
  * Mandatory Statutory Emergency Disclaimer & Handoff (ADR 0002):
- * CivIQ is a municipal civic information platform, not an emergency response service.
+ * CivicPulse is a municipal civic information platform, not an emergency response service.
  * In any life-threatening situation or active road crash, citizens must call 112 immediately.
  */
 export const EMERGENCY_DISCLAIMER_TEXT = {
-  en: 'EMERGENCY NOTICE: For active life-threatening emergencies, medical distress, or severe road accidents, call 112 immediately. CivIQ is a civic information and coordination platform, not an emergency response command centre. Do not wait for in-app updates during an active emergency.',
-  hi: 'आपातकालीन सूचना: जीवन के लिए खतरनाक आपात स्थितियों, चिकित्सीय सहायता या गंभीर सड़क दुर्घटनाओं के लिए तुरंत 112 पर कॉल करें। CivIQ एक नागरिक सूचना मंच है, आपातकालीन प्रतिक्रिया सेवा नहीं। सक्रिय आपातकाल के दौरान ऐप के अपडेट की प्रतीक्षा न करें।',
-  mr: 'आपत्कालीन सूचना: जीवघेण्या आणीबाणी, वैद्यकीय मदत किंवा गंभीर रस्ते अपघातांसाठी त्वरित 112 वर संपर्क साधा. CivIQ हे नागरी माहिती व्यासपीठ असून थेट आपत्कालीन प्रतिसाद केंद्र नाही. चालू आणीबाणीच्या वेळी ॲप अपडेट्सची वाट पाहू नका.',
+  en: 'EMERGENCY NOTICE: For active life-threatening emergencies, medical distress, or severe road accidents, call 112 immediately. CivicPulse is a civic information and coordination platform, not an emergency response command centre. Do not wait for in-app updates during an active emergency.',
+  hi: 'आपातकालीन सूचना: जीवन के लिए खतरनाक आपात स्थितियों, चिकित्सीय सहायता या गंभीर सड़क दुर्घटनाओं के लिए तुरंत 112 पर कॉल करें। CivicPulse एक नागरिक सूचना मंच है, आपातकालीन प्रतिक्रिया सेवा नहीं। सक्रिय आपातकाल के दौरान ऐप के अपडेट की प्रतीक्षा न करें।',
+  mr: 'आपत्कालीन सूचना: जीवघेण्या आणीबाणी, वैद्यकीय मदत किंवा गंभीर रस्ते अपघातांसाठी त्वरित 112 वर संपर्क साधा. CivicPulse हे नागरी माहिती व्यासपीठ असून थेट आपत्कालीन प्रतिसाद केंद्र नाही. चालू आणीबाणीच्या वेळी ॲप अपडेट्सची वाट पाहू नका.',
 };

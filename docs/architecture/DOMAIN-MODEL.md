@@ -1,4 +1,4 @@
-# CivIQ Domain Model
+# CivicPulse Domain Model
 
 ```text
 User

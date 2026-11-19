@@ -1,4 +1,4 @@
-# CivIQ Architecture Snapshot (Release v1.0.0-pilot)
+# CivicPulse Architecture Snapshot (Release v1.0.0-pilot)
 
 ```
                        ┌─────────────────────────────────────────┐
@@ -22,7 +22,7 @@
                 └───────────────────────────┼──────────────────────────────────┘
                                             ▼
                     ┌─────────────────────────────────────────────────┐
-                    │          CivIQ Node.js / Express API            │
+                    │          CivicPulse Node.js / Express API            │
                     │   - RBAC & Scoped Jurisdiction Resolution       │
                     │   - Query Budget & Safe Caching (TTL)           │
                     │   - Circuit Breakers for External Integrations  │

@@ -23,7 +23,7 @@ import LoginPage from '../app/login/page.jsx';
 describe('LoginPage Component Tests', () => {
   it('renders login page with Citizen and Official tabs', () => {
     const html = renderToStaticMarkup(<LoginPage />);
-    expect(html).toContain('Sign in to CivIQ');
+    expect(html).toContain('Sign in to CivicPulse');
     expect(html).toContain('Citizen (OTP)');
     expect(html).toContain('Official Login');
   });

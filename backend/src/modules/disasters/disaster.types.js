@@ -61,12 +61,12 @@ export const BOUNDARY_GEOMETRY_TYPE = {
 
 /**
  * Statutory Boundary Disclaimer (ADR 0002):
- * CivIQ provides operational correlation and municipal civic hazard tracking.
- * CivIQ does NOT supersede or replace statutory emergency declarations by NDMA, SDMA, DDMA, or SACHET.
+ * CivicPulse provides operational correlation and municipal civic hazard tracking.
+ * CivicPulse does NOT supersede or replace statutory emergency declarations by NDMA, SDMA, DDMA, or SACHET.
  */
 export const DISASTER_STATUTORY_DISCLAIMER =
-  'CivIQ Disaster Event Tracking & Situational Awareness Platform. ' +
-  'CivIQ provides operational correlation and municipal coordination aids. ' +
+  'CivicPulse Disaster Event Tracking & Situational Awareness Platform. ' +
+  'CivicPulse provides operational correlation and municipal coordination aids. ' +
   'Official statutory disaster declarations, mandatory evacuations, and authoritative emergency notices ' +
   'remain under the sole jurisdiction of NDMA, State Disaster Management Authorities (SDMA), ' +
   'District Disaster Management Authorities (DDMA), and SACHET.';

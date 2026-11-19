@@ -1,15 +1,15 @@
-# CivIQ Public Safety Communications Policy
+# CivicPulse Public Safety Communications Policy
 
 **Document ID:** `POL-OPS-COMM-001`  
 **Effective Date:** 29 October 2026  
 **Governing ADR:** [ADR 0002: Safety Boundaries and System Scope](../adr/0002-safety-boundaries.md)  
-**Applicable Scope:** All municipal and district public safety announcements, in-app banners, push alerts, and portal broadcasts generated via CivIQ.
+**Applicable Scope:** All municipal and district public safety announcements, in-app banners, push alerts, and portal broadcasts generated via CivicPulse.
 
 ---
 
 ## 1. Purpose & Statutory Boundaries
 
-CivIQ operates as a municipal intelligence, operational coordination, and civic notification platform. **CivIQ is not an official statutory emergency dispatch center (CAD), nor does it replace the National Emergency Response Support System (ERSS - Call 112), SACHET (National Disaster Alert Platform), or State Police control rooms.**
+CivicPulse operates as a municipal intelligence, operational coordination, and civic notification platform. **CivicPulse is not an official statutory emergency dispatch center (CAD), nor does it replace the National Emergency Response Support System (ERSS - Call 112), SACHET (National Disaster Alert Platform), or State Police control rooms.**
 
 ### Core Statutory Mandates
 1. **Never Replace Official 112:** Any message concerning an active, life-threatening emergency must direct citizens to immediately contact official helplines (Call 112).
@@ -20,7 +20,7 @@ CivIQ operates as a municipal intelligence, operational coordination, and civic 
 
 ## 2. Approved Communication Types
 
-CivIQ communications are strictly partitioned into three distinct types:
+CivicPulse communications are strictly partitioned into three distinct types:
 
 | Communication Type | Definition | Verification Requirement |
 |---|---|---|
@@ -32,10 +32,10 @@ CivIQ communications are strictly partitioned into three distinct types:
 
 ## 3. Mandatory Emergency Disclaimer & Handoff
 
-Every public safety alert, push notification, and portal notice emitted by CivIQ **MUST** include the statutory emergency handoff and disclaimer:
+Every public safety alert, push notification, and portal notice emitted by CivicPulse **MUST** include the statutory emergency handoff and disclaimer:
 
 > **Emergency Notice:**  
-> *For active life-threatening emergencies, medical distress, or severe road accidents, call 112 immediately. CivIQ is a civic information and coordination platform, not an emergency response command centre. Do not wait for in-app updates during an active emergency.*
+> *For active life-threatening emergencies, medical distress, or severe road accidents, call 112 immediately. CivicPulse is a civic information and coordination platform, not an emergency response command centre. Do not wait for in-app updates during an active emergency.*
 
 ### Standard Helpline Contacts Included:
 - **National Emergency Number:** `112`
@@ -68,7 +68,7 @@ To prevent hallucination, premature alarm, or misleading safety guidance:
 
 ## 5. Pre-Approved Template System
 
-To facilitate rapid, reliable communication during critical incidents without incurring AI review delays, CivIQ maintains a **Pre-Approved Template Catalog**.
+To facilitate rapid, reliable communication during critical incidents without incurring AI review delays, CivicPulse maintains a **Pre-Approved Template Catalog**.
 
 - **Pre-Approved Templates** (`tpl-verified-hazard-alert`, `tpl-traffic-corridor-detour`, `tpl-incident-cleared-notice`, `tpl-official-weather-hazard`) are pre-vetted by municipal legal and safety officers.
 - They enforce strict variable interpolation (`{{locationName}}`, `{{precautionAction}}`, `{{alternateRoute}}`).

@@ -1,5 +1,5 @@
 /**
- * Types & Constants for CivIQ Operational Map
+ * Types & Constants for CivicPulse Operational Map
  */
 
 export const MAP_STATUS_OPTIONS = [

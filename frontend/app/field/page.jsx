@@ -1,6 +1,6 @@
 import { FieldWorkerConsole } from '@/features/field';
 export const metadata = {
-    title: 'Field Worker Console - CivIQ',
+    title: 'Field Worker Console - CivicPulse',
     description: 'Mobile-first task execution, navigation, and field reporting for municipal workers.',
     manifest: '/manifest.json',
 };

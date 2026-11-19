@@ -1,4 +1,4 @@
-# Model Card — CivIQ Vision Evidence Analysis Service
+# Model Card — CivicPulse Vision Evidence Analysis Service
 
 ## Model Details
 

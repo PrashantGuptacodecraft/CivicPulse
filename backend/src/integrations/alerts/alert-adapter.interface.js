@@ -102,7 +102,7 @@ export class BaseAlertSourceAdapter {
    * Ingests a single alert payload through this adapter:
    * 1. Validates source signature/provenance.
    * 2. Parses the alert payload.
-   * 3. Normalizes to CivIQ standard contract with verbatim official content.
+   * 3. Normalizes to CivicPulse standard contract with verbatim official content.
    *
    * @param {string|Object} rawPayload - Raw alert payload
    * @param {Object} options - Options including signature

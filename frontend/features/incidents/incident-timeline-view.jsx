@@ -243,7 +243,7 @@ export function IncidentTimelineView({
                       Sensitive Trauma / Graphic Content Restricted
                     </p>
                     <p className="text-[11px] text-red-700 mt-1">
-                      {ev.caption ? `${ev.caption} — ` : ''}Accident victim injury evidence protected per CivIQ Privacy and Ethics Policy.
+                      {ev.caption ? `${ev.caption} — ` : ''}Accident victim injury evidence protected per CivicPulse Privacy and Ethics Policy.
                     </p>
                   </div>
                 );

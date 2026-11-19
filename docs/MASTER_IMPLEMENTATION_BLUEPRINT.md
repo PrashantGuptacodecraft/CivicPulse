@@ -1,4 +1,4 @@
-# CivIQ Master Implementation Blueprint
+# CivicPulse Master Implementation Blueprint
 
 This file summarizes the complete 72-phase implementation plan. Detailed instructions live in `docs/phases/`.
 
@@ -7,7 +7,7 @@ This file summarizes the complete 72-phase implementation plan. Detailed instruc
 
 **Tasks:**
 - Create docs/product/PRD.md with personas, problem, goals, boundaries, KPIs and non-goals.
-- Define the core CivIQ promise: identity → evidence → verification → action → proof → learning.
+- Define the core CivicPulse promise: identity → evidence → verification → action → proof → learning.
 - Define the first pilot jurisdiction and the India-wide capability target.
 
 **Primary files:**
@@ -855,7 +855,7 @@ This file summarizes the complete 72-phase implementation plan. Detailed instruc
 
 **Tasks:**
 - Model authorized responder organizations and scoped access.
-- Add dispatch recommendation without pretending CivIQ is the official emergency dispatch center.
+- Add dispatch recommendation without pretending CivicPulse is the official emergency dispatch center.
 - Audit sensitive incident access.
 
 **Primary files:**
@@ -1061,4 +1061,4 @@ This file summarizes the complete 72-phase implementation plan. Detailed instruc
 - `CHANGELOG.md`
 
 **Exit checks:** Full regression, UAT sign-off and production smoke test.
-**Commit:** `release(phase-72): publish pilot-ready CivIQ`
+**Commit:** `release(phase-72): publish pilot-ready CivicPulse`

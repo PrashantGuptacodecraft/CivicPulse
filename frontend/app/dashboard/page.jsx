@@ -1,7 +1,7 @@
 import { CommandDashboard } from '@/features/dashboard';
 
 export const metadata = {
-  title: 'Authority Command Dashboard - CivIQ',
+  title: 'Authority Command Dashboard - CivicPulse',
   description: 'Executive municipal command oversight, KPI intelligence, SLA adherence, and department accountability.',
 };
 

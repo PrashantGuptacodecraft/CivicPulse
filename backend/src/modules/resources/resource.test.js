@@ -347,7 +347,7 @@ describe('Phase 64: Disaster Resource & Shelter Registry', () => {
       expect(res.status).toBe(200);
       expect(res.body.success).toBe(true);
       expect(res.body.count).toBeGreaterThanOrEqual(6);
-      expect(res.body.disclaimer).toContain('CivIQ Disaster Resource & Shelter Notice');
+      expect(res.body.disclaimer).toContain('CivicPulse Disaster Resource & Shelter Notice');
     });
 
     it('GET /resources/nearby returns nearest shelters to coordinates', async () => {

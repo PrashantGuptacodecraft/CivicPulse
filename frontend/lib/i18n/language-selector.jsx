@@ -3,7 +3,7 @@
  * Phase 67: Add multilingual architecture
  *
  * Fully accessible, mobile-first language switcher.
- * Conforms to CivIQ design system: >=44px touch targets, keyboard navigation,
+ * Conforms to CivicPulse design system: >=44px touch targets, keyboard navigation,
  * native script display, and screen-reader accessible labeling.
  */
 

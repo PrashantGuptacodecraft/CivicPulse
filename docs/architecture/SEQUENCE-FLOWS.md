@@ -1,4 +1,4 @@
-# CivIQ Core Sequence Flows
+# CivicPulse Core Sequence Flows
 
 ## Normal civic issue
 
@@ -13,7 +13,7 @@ Citizen → Auth → Report API → Evidence checks → AI gateway → Verificat
 ```text
 Citizen → Auth → Emergency incident
 → immediate official emergency handoff (e.g., call 112)
-→ CivIQ status = UNVERIFIED
+→ CivicPulse status = UNVERIFIED
 → responder/authority confirmation
 → field updates → closure
 ```

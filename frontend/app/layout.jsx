@@ -4,7 +4,7 @@ import { AuthProvider } from '../context/auth-context.jsx';
 import './globals.css';
 
 export const metadata = {
-  title: 'CivIQ — Civic Intelligence Platform',
+  title: 'CivicPulse — Civic Intelligence Platform',
   description: 'Report civic issues, track resolutions, and hold local government accountable. Verified, AI-powered, and built for India.',
 };
 
@@ -44,13 +44,13 @@ export default function RootLayout({ children }) {
                     </svg>
                   </div>
                   <div>
-                    <span className="font-bold text-sm text-text-primary leading-none block">CivIQ</span>
+                    <span className="font-bold text-sm text-text-primary leading-none block">CivicPulse</span>
                     <span className="text-[10px] text-text-tertiary tracking-wide">Civic Intelligence Platform</span>
                   </div>
                 </div>
 
                 <p className="text-xs text-text-tertiary text-center">
-                  &copy; {new Date().getFullYear()} CivIQ Platform · Pilot: Pune Municipal Corporation
+                  &copy; {new Date().getFullYear()} CivicPulse Platform · Pilot: Pune Municipal Corporation
                 </p>
 
                 <div className="flex items-center gap-5 text-xs">

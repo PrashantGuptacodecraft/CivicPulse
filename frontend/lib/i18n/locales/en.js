@@ -82,7 +82,7 @@ export const en = {
   },
   safety: {
     officialDisclaimer:
-      'CivIQ is a civic operations platform. Official statutory emergency directives are issued exclusively by NDMA, SDMA, DDMA, and SACHET.',
+      'CivicPulse is a civic operations platform. Official statutory emergency directives are issued exclusively by NDMA, SDMA, DDMA, and SACHET.',
     nonEmergencyNotice: 'Do not use this portal for immediate distress calls. Contact 112.',
     call112: 'National Emergency (112)',
     call108: 'Ambulance / Medical Emergency (108)',
@@ -95,7 +95,7 @@ export const en = {
   settings: {
     languagePreference: 'Language Preference',
     chooseLanguage: 'Select your preferred language',
-    languageDescription: 'CivIQ will display interface text and notifications in this language.',
+    languageDescription: 'CivicPulse will display interface text and notifications in this language.',
     theme: 'Display Theme',
     notifications: 'Notification Preferences',
     offlineMode: 'Offline Storage',

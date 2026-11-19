@@ -286,7 +286,7 @@ describe('Phase 59: Emergency Responder/Agency Role Model & Scoped Access', () =
       expect(recommendation.isOfficialCadDispatch).toBe(false);
       expect(recommendation.requiresOfficial112Handoff).toBe(true);
       expect(recommendation.statutoryNotice).toBe(DISPATCH_ADVISORY_DISCLAIMER);
-      expect(recommendation.statutoryNotice).toContain('ADVISORY NOTICE: CivIQ dispatch recommendations');
+      expect(recommendation.statutoryNotice).toContain('ADVISORY NOTICE: CivicPulse dispatch recommendations');
     });
 
     it('updates recommendation status when acknowledged by official agency dispatcher', async () => {

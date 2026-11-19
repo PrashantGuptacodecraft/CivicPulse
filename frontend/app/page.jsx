@@ -127,7 +127,7 @@ export default function HomePage() {
           </h1>
 
           <p className="animate-fade-up anim-delay-100 text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed">
-            CivIQ connects citizens directly to officials. Report a problem, track its resolution, and hold your municipality accountable — all in one verified platform.
+            CivicPulse connects citizens directly to officials. Report a problem, track its resolution, and hold your municipality accountable — all in one verified platform.
           </p>
 
           {/* CTAs */}
@@ -228,13 +228,13 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary mb-3">
-              Why CivIQ
+              Why CivicPulse
             </span>
             <h2 className="text-3xl md:text-4xl font-black text-text-primary tracking-tight">
               Built for trust, designed for speed
             </h2>
             <p className="text-text-secondary mt-3 text-base max-w-xl mx-auto leading-relaxed">
-              Every layer of CivIQ is engineered to prevent misuse, accelerate response, and create accountability.
+              Every layer of CivicPulse is engineered to prevent misuse, accelerate response, and create accountability.
             </p>
           </div>
 
@@ -303,7 +303,7 @@ export default function HomePage() {
                 Your city, your voice.
               </h2>
               <p className="text-white/60 mb-8 text-base max-w-lg mx-auto leading-relaxed">
-                Join thousands of citizens already using CivIQ to hold local government accountable and get real results.
+                Join thousands of citizens already using CivicPulse to hold local government accountable and get real results.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">

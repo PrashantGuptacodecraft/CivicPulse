@@ -1,4 +1,4 @@
-# CivIQ Responsive System
+# CivicPulse Responsive System
 
 **🚨 MOBILE-FIRST GLOBAL RULE 🚨**
 All features must be designed and implemented mobile-first. 

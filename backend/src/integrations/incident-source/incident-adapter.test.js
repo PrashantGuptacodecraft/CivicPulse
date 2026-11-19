@@ -114,7 +114,7 @@ describe('Phase 58: Official Incident Source Adapter Contract', () => {
       expect(record.impact.fatalities).toBe(0);
       expect(record.impact.injured).toBe(3);
       expect(record.provenance.provenanceHash).toBeDefined();
-      expect(record.provenance.disclaimer).toContain('CivIQ integration adapter');
+      expect(record.provenance.disclaimer).toContain('CivicPulse integration adapter');
       expect(record.provenance.isLiveGovernmentFeed).toBe(false);
 
       // Verify that Aadhaar was stripped from raw feed payload

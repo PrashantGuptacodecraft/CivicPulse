@@ -1,4 +1,4 @@
-# CivIQ — National Civic, Incident & Disaster Intelligence Platform
+# CivicPulse — National Civic, Incident & Disaster Intelligence Platform
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](#security--data-protection-standards)
 [![Node Version](https://img.shields.io/badge/node-%3E%3D20.0.0-blue)](package.json)
@@ -9,9 +9,9 @@
 [![Database](https://img.shields.io/badge/database-Prisma%20ORM%20%7C%20PostgreSQL-indigo)](shared/db/)
 [![Accessibility](https://img.shields.io/badge/accessibility-WCAG%202.2%20AA-purple)](docs/ux/ACCESSIBILITY.md)
 
-**CivIQ** is a national-scale, production-ready civic intelligence, incident management, and disaster response platform designed specifically for Indian urban local bodies (ULBs), smart cities, and municipal departments.
+**CivicPulse** is a national-scale, production-ready civic intelligence, incident management, and disaster response platform designed specifically for Indian urban local bodies (ULBs), smart cities, and municipal departments.
 
-Unlike legacy grievance portals that act as passive "complaint black holes," CivIQ provides an end-to-end, closed-loop operational pipeline: from authenticated citizen reporting and AI-assisted triage to workload-aware field dispatch, GPS-geofenced resolution proof, and mandatory citizen sign-off.
+Unlike legacy grievance portals that act as passive "complaint black holes," CivicPulse provides an end-to-end, closed-loop operational pipeline: from authenticated citizen reporting and AI-assisted triage to workload-aware field dispatch, GPS-geofenced resolution proof, and mandatory citizen sign-off.
 
 ---
 
@@ -59,9 +59,9 @@ $$\textbf{Identity} \longrightarrow \textbf{Evidence} \longrightarrow \textbf{Ve
 
 ## National Coexistence & Integration Architecture
 
-CivIQ is designed to **coexist with and complement** existing Indian public and emergency ecosystems:
+CivicPulse is designed to **coexist with and complement** existing Indian public and emergency ecosystems:
 
-| System | Role in CivIQ Architecture |
+| System | Role in CivicPulse Architecture |
 |---|---|
 | **CPGRAMS** | Bi-directional grievance sync for central/state municipal matters. |
 | **Emergency 112** | Fast-path emergency escalation for high-hazard accidents and life-safety incidents. |
@@ -74,7 +74,7 @@ CivIQ is designed to **coexist with and complement** existing Indian public and 
 ## Security & Data Protection Standards
 
 - **Authenticated Reporting**: Citizens authenticate via OTP or verified credentials; anonymous public submissions are disallowed to prevent spam.
-- **Strict Citizen Privacy**: CivIQ never stores raw Aadhaar numbers or unredacted identity credentials. Citizen PII is masked by default.
+- **Strict Citizen Privacy**: CivicPulse never stores raw Aadhaar numbers or unredacted identity credentials. Citizen PII is masked by default.
 - **AI Boundaries**: AI acts strictly as an advisory decision-support layer. High-impact administrative actions (penalties, contractor blacklisting, emergency escalation) require human authorization.
 - **Tamper-Evident Audits**: All status changes, priority recalculations, and administrative overrides generate immutable audit records.
 - **Geofenced Field Proof**: Resolutions cannot be marked complete without verified on-site GPS proximity matching and before/after visual proof.

@@ -5,7 +5,7 @@ import { SYNC_STATUS } from './offline-sync.js';
 /**
  * SyncStatusBadge component
  * Shows real-time sync status, offline indicators, and pending mutation counts
- * Follows CivIQ Design System & Motion Tokens with accessible contrast.
+ * Follows CivicPulse Design System & Motion Tokens with accessible contrast.
  */
 export function SyncStatusBadge({
   isOffline,

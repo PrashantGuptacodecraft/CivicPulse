@@ -1,5 +1,5 @@
 /**
- * CivIQ Auth Router
+ * CivicPulse Auth Router
  * Mounts all authentication HTTP endpoints under /auth
  *
  * Routes:

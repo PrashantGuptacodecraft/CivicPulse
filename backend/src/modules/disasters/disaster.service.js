@@ -183,7 +183,7 @@ export class DisasterService {
         corroborationScore: 0.0,
       },
       provenance: {
-        originatingAuthority: data.originatingAuthority || 'CivIQ Municipal Operations Intake',
+        originatingAuthority: data.originatingAuthority || 'CivicPulse Municipal Operations Intake',
         leadRespondingAgency: data.leadRespondingAgency || 'District Disaster Management Authority (DDMA)',
         statutoryNotice: DISASTER_STATUTORY_DISCLAIMER,
         provenanceHash,

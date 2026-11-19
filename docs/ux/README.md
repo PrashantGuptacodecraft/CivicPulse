@@ -1,16 +1,14 @@
-# CivIQ UX Documentation System
+# CivicPulse UX Documentation System
 
-Welcome to the UX documentation system for CivIQ. This directory contains the authoritative specifications, rules, and guidelines for building the CivIQ user interface.
+Welcome to the UX documentation system for CivicPulse. This directory contains the specifications, rules, and guidelines for building the CivicPulse user interface.
 
 ## Vision
-CivIQ is a modern, trustworthy, mobile-first civic technology platform for India. It handles high-impact tasks like civic issue reporting, incident management, disaster operations, and infrastructure intelligence. The application must feel premium, modern, fast, trustworthy, clear, professional, operational, accessible, and human.
+CivicPulse is a modern, trustworthy, mobile-first civic technology platform. It handles civic issue reporting, incident management, disaster operations, and infrastructure intelligence. The application is built to be fast, trustworthy, clear, professional, operational, accessible, and human.
 
-**🚨 MANDATORY RULE: ALL USER-FACING FEATURES MUST BE DESIGNED MOBILE-FIRST 🚨**
+**🚨 CORE PRINCIPLE: ALL USER-FACING FEATURES ARE DESIGNED MOBILE-FIRST 🚨**
 
-Every frontend phase and development cycle MUST comply with the rules outlined in these documents.
-
-## Mandatory Reading Order for Frontend Coding Agents
-Before implementing UI features, coding agents must review the following foundational documents:
+## Frontend Architecture & Reference Guides
+Before implementing UI features, review the following foundational documents:
 1. `README.md` (This file)
 2. `DESIGN-SYSTEM.md`
 3. `RESPONSIVE-SYSTEM.md`

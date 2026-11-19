@@ -1,7 +1,7 @@
 import { AssetIntelligenceDashboard } from '../../features/assets/index.js';
 
 export const metadata = {
-  title: 'Asset Intelligence & Predictive Maintenance — CivIQ',
+  title: 'Asset Intelligence & Predictive Maintenance — CivicPulse',
   description: 'Identify high-recurrence failure clusters, evaluate downtime impact, and prioritize municipal interventions.',
 };
 

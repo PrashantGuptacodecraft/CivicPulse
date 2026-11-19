@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * CivIQ Auth Context
+ * CivicPulse Auth Context
  *
  * Provides: user, role, isAuthenticated, login(token, user), logout()
  * Hydrates from localStorage on mount via GET /api/auth/me

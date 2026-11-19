@@ -1,4 +1,4 @@
-# CivIQ Acceptance Criteria
+# CivicPulse Acceptance Criteria
 
 ## 1. Authentication and Identity
 - **AC1.1:** The system must not allow anonymous public reporting of issues or incidents.
@@ -21,6 +21,6 @@
 - **AC4.3:** The platform must not store raw Aadhaar numbers or other unnecessary identity data.
 
 ## 5. Integrations and Boundaries
-- **AC5.1:** CivIQ must not present itself as a replacement for official systems (e.g., 112, CPGRAMS, SACHET). Official alerts remain the authoritative source.
+- **AC5.1:** CivicPulse must not present itself as a replacement for official systems (e.g., 112, CPGRAMS, SACHET). Official alerts remain the authoritative source.
 - **AC5.2:** Production integrations with government systems must only be enabled when proper authorization and credentials exist.
 - **AC5.3:** Development and testing environments must use clearly labeled mocks or adapters, never production endpoints without explicit flags.

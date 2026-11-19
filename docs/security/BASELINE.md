@@ -40,4 +40,4 @@ Use deny-by-default RBAC plus jurisdiction/organization scoping. Every privilege
 For production deployment in India, map controls to the Digital Personal Data Protection Act/Rules, applicable security requirements, sectoral policies and contractual requirements.
 
 ## Emergency data
-Emergency reporting should have a clear official-service handoff. CivIQ is not the emergency authority.
+Emergency reporting should have a clear official-service handoff. CivicPulse is not the emergency authority.

@@ -117,7 +117,7 @@ function getNavLinksForRole(role) {
   return NAV_LINKS;
 }
 
-// ─── CivIQ Logo Mark ─────────────────────────────────────────────────────────
+// ─── CivicPulse Logo Mark ─────────────────────────────────────────────────────────
 function LogoMark({ size = 32 }) {
   return (
     <div
@@ -165,13 +165,13 @@ export function SiteHeader() {
         <Link
           href="/"
           className="flex items-center gap-2.5 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-xl group shrink-0"
-          aria-label="CivIQ home"
+          aria-label="CivicPulse home"
         >
           <div className="transition-transform duration-200 group-hover:scale-105 group-active:scale-95">
             <LogoMark size={34} />
           </div>
           <div className="flex flex-col leading-none">
-            <span className="font-bold text-base tracking-tight text-text-primary">CivIQ</span>
+            <span className="font-bold text-base tracking-tight text-text-primary">CivicPulse</span>
             <span className="text-[9px] font-semibold uppercase tracking-widest text-text-tertiary hidden sm:block">
               Civic Intelligence
             </span>

@@ -21,7 +21,7 @@ export class MockAlertSandboxAdapter extends BaseAlertSourceAdapter {
   constructor(options = {}) {
     super({
       adapterId: 'mock-sandbox',
-      sourceName: 'CivIQ Official Alert Sandbox',
+      sourceName: 'CivicPulse Official Alert Sandbox',
       authority: ALERT_SOURCE_AUTHORITY.MOCK_SANDBOX,
       isLiveIntegration: false,
       feedUrl: 'mock://civiq.local/alerts/feed',

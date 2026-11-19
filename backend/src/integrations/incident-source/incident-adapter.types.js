@@ -47,10 +47,10 @@ export const LIGHTING_CONDITIONS = {
 
 /**
  * Mandatory boundary disclaimer for official government feeds.
- * CivIQ acts as a local intake and intelligence correlation platform,
+ * CivicPulse acts as a local intake and intelligence correlation platform,
  * not a replacement for statutory road accident databases (iRAD/eDAR).
  */
 export const OFFICIAL_ADAPTER_DISCLAIMER =
-  'CivIQ integration adapter for official road accident records (iRAD/eDAR). ' +
+  'CivicPulse integration adapter for official road accident records (iRAD/eDAR). ' +
   'This integration ingests official accident data to enrich municipal safety analytics and hazard awareness. ' +
-  'CivIQ does not replace official statutory reporting or investigation procedures mandated by MoRTH or State Police.';
+  'CivicPulse does not replace official statutory reporting or investigation procedures mandated by MoRTH or State Police.';
