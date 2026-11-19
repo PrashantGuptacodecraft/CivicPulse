@@ -16,43 +16,56 @@ async function handle(req, { params }) {
   const url = new URL(req.url);
   const targetUrl = `${BACKEND_URL.replace(/\/$/, '')}/${path}${url.search}`;
 
-  const headers = new Headers();
-  for (const [key, value] of req.headers.entries()) {
-    if (['host', 'connection', 'content-length'].includes(key.toLowerCase())) continue;
-    headers.set(key, value);
+  // Forward only essential application headers to avoid edge-proxy conflicts
+  const forwardHeaders = {};
+  const allowedHeaders = [
+    'content-type',
+    'accept',
+    'authorization',
+    'x-session-token',
+    'x-worker-id',
+    'x-request-id',
+    'cache-control',
+  ];
+
+  for (const name of allowedHeaders) {
+    const val = req.headers.get(name);
+    if (val) forwardHeaders[name] = val;
   }
 
   const options = {
     method: req.method,
-    headers,
+    headers: forwardHeaders,
   };
 
   if (!['GET', 'HEAD'].includes(req.method)) {
     try {
-      options.body = await req.arrayBuffer();
+      const text = await req.text();
+      if (text) options.body = text;
     } catch {
-      // No body to read
+      // no body
     }
   }
 
   try {
     const backendRes = await fetch(targetUrl, options);
-    const body = await backendRes.arrayBuffer();
+    const responseText = await backendRes.text();
 
     const responseHeaders = new Headers();
-    backendRes.headers.forEach((val, key) => {
-      if (['transfer-encoding', 'content-encoding'].includes(key.toLowerCase())) return;
-      responseHeaders.set(key, val);
-    });
+    const contentType = backendRes.headers.get('content-type');
+    if (contentType) responseHeaders.set('content-type', contentType);
 
-    return new NextResponse(body, {
+    return new NextResponse(responseText, {
       status: backendRes.status,
       statusText: backendRes.statusText,
       headers: responseHeaders,
     });
   } catch (err) {
     return NextResponse.json(
-      { error: 'Failed to communicate with backend service.', details: err.message },
+      {
+        error: 'Failed to communicate with backend service.',
+        details: err.cause?.message || err.message,
+      },
       { status: 502 }
     );
   }
