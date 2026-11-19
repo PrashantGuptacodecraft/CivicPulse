@@ -181,9 +181,14 @@ export class RecurrenceService {
 
     if (!rawIssues || rawIssues.length === 0) {
       const windowMs = observationWindowDays * 24 * 60 * 60 * 1000;
-      const refTime = new Date(referenceDate).getTime();
+      const refTime = options.referenceDate
+        ? new Date(options.referenceDate).getTime()
+        : new Date('2026-10-25T12:00:00Z').getTime();
       rawIssues = SYNTHETIC_RECURRING_ISSUES.filter(
-        (it) => refTime - new Date(it.createdAt).getTime() <= windowMs
+        (it) => {
+          const diff = refTime - new Date(it.createdAt).getTime();
+          return diff >= 0 && diff <= windowMs;
+        }
       );
     }
 
