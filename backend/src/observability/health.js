@@ -3,6 +3,22 @@ import { metricsCollector } from './metrics.js';
 
 export const healthRouter = Router();
 
+healthRouter.get('/', (req, res) => {
+    res.status(200).json({
+        name: 'CivicPulse Backend API',
+        status: 'ok',
+        version: '1.0.0',
+        message: 'CivicPulse Serverless API is live and operational.',
+        endpoints: {
+            health: '/health',
+            ready: '/ready',
+            metrics: '/metrics',
+            issues: '/issues',
+            auth: '/auth',
+        },
+    });
+});
+
 healthRouter.get('/health', (req, res) => {
     res.status(200).json({ status: 'ok' });
 });

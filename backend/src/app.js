@@ -88,6 +88,14 @@ export function createApp() {
   app.use('/sync', syncRouter);
   app.use('/auth', authRouter);
 
+  // 404 Not Found Handler
+  app.use((req, res) => {
+    res.status(404).json({
+      error: `Route ${req.method} ${req.path} not found.`,
+      status: 404,
+    });
+  });
+
   // Global Error Handler
   app.use((err, req, res, next) => {
     console.error('Unhandled API error:', err);
