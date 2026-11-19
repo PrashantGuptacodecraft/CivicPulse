@@ -259,10 +259,18 @@ authRouter.post('/password/login', authLimiter, async (req, res) => {
       return res.status(401).json({ error: result.error });
     }
 
-    const user = await prisma.user.findUnique({
-      where: { email: email.toLowerCase().trim() },
-      include: { profile: true },
-    });
+    let user = result.user;
+    if (!user) {
+      try {
+        user = await prisma.user.findUnique({
+          where: { email: email.toLowerCase().trim() },
+          include: { profile: true },
+        });
+      } catch {}
+    }
+    if (!user) {
+      user = authMemoryStore.findUser(email.toLowerCase().trim());
+    }
 
     return res.status(200).json({
       token: result.sessionToken,
